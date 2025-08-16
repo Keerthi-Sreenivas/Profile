@@ -22,7 +22,7 @@ const HeroSection = () => {
             <motion.h2 
               className="text-2xl text-primary-light mb-6 font-sans font-light"
             >
-              Gen AI Solutions Architect at AWS
+              Gen AI Solutions Architect at AWS • Creator at QriositybyKeerthi
             </motion.h2>
             <motion.p 
               className="text-white/70 mb-8 text-lg"
