@@ -10,6 +10,12 @@ const experiences = [
     description: "Driving AI driven developer productivity enablement for Amazon Q Developer and Kiro across 50+ customers and 3000+ developers. Led to direct product adoption growth by 150% across multiple ISV customers and partners. Orchestrated multiple PoC's for Q Business and Q for Quicksight for Gen AI enablement for enterprise AWS Customer productivity use cases. Partnered with product teams for negotiating policy exceptions for Aurora MySQL upgrades for customers. Led 10+ resilience reviews, security assessments and business reviews for enterprise AWS customers providing actionable insights and delivered 5+ tailored enablement sessions."
   },
   {
+    title: "Founder & Content Creator",
+    company: "Qriosity (@qriositybykeerthi)",
+    period: "2020 - Current",
+    description: "Founded and lead Qriosity, a platform focused on technology education and curiosity-driven learning. Created engaging content around AI, data science, and technology trends. Built a community of tech enthusiasts and professionals. Developed educational resources and tutorials to democratize technical knowledge and inspire others to explore the intersection of technology and innovation."
+  },
+  {
     title: "Cloud/Infrastructure Engineer",
     company: "Barclays - Global Technology Infrastructure Services",
     period: "Jan 2023 - June 2024",
