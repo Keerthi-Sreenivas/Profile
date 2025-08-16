@@ -22,52 +22,122 @@ const education = [
 
 const EducationSection = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-20 px-4 relative overflow-hidden">
+      {/* Animated background elements */}
+      <motion.div 
+        className="absolute inset-0 bg-gradient-cyber opacity-20"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.2 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2 }}
+      />
+      <motion.div 
+        className="absolute top-32 right-16 w-40 h-40 bg-gradient-neon rounded-full blur-3xl"
+        animate={{ 
+          x: [0, -60, 0],
+          y: [0, 40, 0],
+          scale: [1, 1.3, 1]
+        }}
+        transition={{ 
+          duration: 10, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        }}
+      />
+      <motion.div 
+        className="absolute bottom-32 left-16 w-28 h-28 bg-gradient-cosmic rounded-full blur-2xl"
+        animate={{ 
+          x: [0, 50, 0],
+          y: [0, -25, 0],
+          scale: [1, 0.9, 1]
+        }}
+        transition={{ 
+          duration: 7, 
+          repeat: Infinity, 
+          ease: "easeInOut",
+          delay: 3
+        }}
+      />
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.h2 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: -30, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-white mb-12 text-center font-display"
+          transition={{ 
+            duration: 0.6,
+            type: "spring",
+            stiffness: 100
+          }}
+          className="text-4xl font-bold text-white mb-16 text-center font-display text-glow"
         >
           Education
         </motion.h2>
-        <div className="space-y-12">
+        <div className="space-y-8">
           {education.map((edu, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/10 transition-all"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -120 : 120, rotateY: 10 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.8,
+                delay: index * 0.2,
+                type: "spring",
+                stiffness: 70
+              }}
+              whileHover={{ 
+                scale: 1.02,
+                y: -8,
+                transition: { duration: 0.3 }
+              }}
+              className="glass-card p-8 hover-glow group cursor-pointer"
             >
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-primary/20 rounded-lg">
-                  <GraduationCap className="w-6 h-6 text-primary-light" />
-                </div>
+              <div className="flex items-start gap-6">
+                <motion.div 
+                  className="p-3 bg-gradient-neon rounded-xl shadow-glow"
+                  whileHover={{ 
+                    scale: 1.15,
+                    rotate: -5,
+                    transition: { duration: 0.2 }
+                  }}
+                >
+                  <GraduationCap className="w-7 h-7 text-white" />
+                </motion.div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white mb-1 font-display">{edu.degree}</h3>
-                  <div className="flex items-center gap-2 text-primary-light mb-2">
-                    <span>{edu.school}</span>
-                    <span>•</span>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
+                  <motion.h3 
+                    className="text-2xl font-semibold text-white mb-3 font-display group-hover:text-gradient transition-all duration-300"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    {edu.degree}
+                  </motion.h3>
+                  <div className="flex items-center gap-3 text-white/70 mb-3">
+                    <span className="font-medium text-accent-light">{edu.school}</span>
+                    <span className="w-1 h-1 bg-primary rounded-full"></span>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-primary" />
                       <span>{edu.period}</span>
                     </div>
                   </div>
-                  <div className="text-primary-light mb-3">
-                    <span className="font-semibold">GPA: </span>{edu.gpa}
+                  <div className="text-accent-light mb-4 font-medium">
+                    <span className="text-white/60">GPA: </span>{edu.gpa}
                   </div>
-                  <p className="text-white/70 mb-4">{edu.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <motion.p 
+                    className="text-white/75 leading-relaxed mb-6 group-hover:text-white transition-colors duration-300"
+                    initial={{ opacity: 0.75 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    {edu.description}
+                  </motion.p>
+                  <div className="flex flex-wrap gap-3">
                     {edu.coursework.map((course, courseIndex) => (
-                      <span
+                      <motion.span
                         key={courseIndex}
-                        className="px-3 py-1 bg-primary/20 text-primary-light rounded-full text-sm"
+                        whileHover={{ scale: 1.05 }}
+                        className="px-4 py-2 bg-gradient-cosmic/20 text-primary-light rounded-full text-sm border border-primary/30 hover:border-primary/60 transition-all backdrop-blur-sm"
                       >
                         {course}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
                 </div>

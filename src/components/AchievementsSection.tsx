@@ -48,46 +48,134 @@ const achievements = [
 
 const AchievementsSection = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-20 px-4 relative overflow-hidden">
+      {/* Animated background elements */}
+      <motion.div 
+        className="absolute inset-0 bg-gradient-cyber opacity-25"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.25 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.6 }}
+      />
+      <motion.div 
+        className="absolute top-40 left-24 w-48 h-48 bg-gradient-neon rounded-full blur-3xl"
+        animate={{ 
+          x: [0, -70, 0],
+          y: [0, 50, 0],
+          scale: [1, 1.3, 1]
+        }}
+        transition={{ 
+          duration: 12, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        }}
+      />
+      <motion.div 
+        className="absolute bottom-32 right-16 w-36 h-36 bg-gradient-cosmic rounded-full blur-2xl"
+        animate={{ 
+          x: [0, 45, 0],
+          y: [0, -35, 0],
+        }}
+        transition={{ 
+          duration: 8, 
+          repeat: Infinity, 
+          ease: "easeInOut",
+          delay: 4
+        }}
+      />
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.h2 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: -30, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-white mb-12 text-center font-display"
+          transition={{ 
+            duration: 0.6,
+            type: "spring",
+            stiffness: 100
+          }}
+          className="text-4xl font-bold text-white mb-16 text-center font-display text-glow"
         >
           Achievements & Recognition
         </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
             <motion.a
               key={index}
               href={achievement.link}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:bg-white/10 transition-all cursor-pointer group"
+              initial={{ 
+                opacity: 0, 
+                y: 70,
+                rotateX: 15,
+                scale: 0.9
+              }}
+              whileInView={{ 
+                opacity: 1, 
+                y: 0,
+                rotateX: 0,
+                scale: 1
+              }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.8,
+                delay: index * 0.12,
+                type: "spring",
+                stiffness: 65
+              }}
+              whileHover={{ 
+                scale: 1.05,
+                y: -10,
+                rotateY: 3,
+                transition: { duration: 0.3 }
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="glass-card p-8 hover-glow group cursor-pointer"
             >
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-primary/20 rounded-lg flex-shrink-0">
-                  <div className="text-primary-light">
+              <div className="flex items-start gap-6">
+                <motion.div 
+                  className="p-3 bg-gradient-neon rounded-xl flex-shrink-0 shadow-glow"
+                  whileHover={{ 
+                    scale: 1.2,
+                    rotate: -10,
+                    transition: { duration: 0.2 }
+                  }}
+                >
+                  <div className="text-white w-6 h-6 flex items-center justify-center">
                     {achievement.icon}
                   </div>
-                </div>
+                </motion.div>
                 <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-lg font-semibold text-white font-display group-hover:text-primary-light transition-colors">{achievement.title}</h3>
-                      <span className="px-2 py-1 bg-primary/20 text-primary-light rounded-full text-xs">
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex flex-col gap-2">
+                      <motion.h3 
+                        className="text-lg font-semibold text-white font-display group-hover:text-gradient transition-all duration-300"
+                        whileHover={{ scale: 1.02 }}
+                      >
+                        {achievement.title}
+                      </motion.h3>
+                      <motion.span 
+                        className="px-3 py-1 bg-gradient-cosmic/30 text-accent-light rounded-full text-xs border border-accent/30 w-fit"
+                        whileHover={{ scale: 1.05 }}
+                      >
                         {achievement.year}
-                      </span>
+                      </motion.span>
                     </div>
-                    <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-primary-light transition-colors" />
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 45 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-primary-light transition-colors" />
+                    </motion.div>
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed">{achievement.description}</p>
+                  <motion.p 
+                    className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300"
+                    initial={{ opacity: 0.7 }}
+                    whileHover={{ opacity: 0.9 }}
+                  >
+                    {achievement.description}
+                  </motion.p>
                 </div>
               </div>
             </motion.a>

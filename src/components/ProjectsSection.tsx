@@ -30,13 +30,40 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-20 px-4 relative overflow-hidden">
+      {/* Animated background elements */}
+      <motion.div 
+        className="absolute inset-0 bg-gradient-dark opacity-25"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.25 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5 }}
+      />
+      <motion.div 
+        className="absolute top-16 left-20 w-36 h-36 bg-gradient-cosmic rounded-full blur-3xl"
+        animate={{ 
+          x: [0, 40, 0],
+          y: [0, -50, 0],
+          scale: [1, 1.1, 1]
+        }}
+        transition={{ 
+          duration: 9, 
+          repeat: Infinity, 
+          ease: "easeInOut" 
+        }}
+      />
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.h2 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: -30, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-gray-800 mb-12 text-center font-display"
+          transition={{ 
+            duration: 0.6,
+            type: "spring",
+            stiffness: 100
+          }}
+          className="text-4xl font-bold text-white mb-16 text-center font-display text-glow"
         >
           Featured Projects
         </motion.h2>
@@ -44,41 +71,74 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all hover:-translate-y-1"
+              initial={{ 
+                opacity: 0, 
+                y: 80,
+                rotateX: 20,
+                scale: 0.9
+              }}
+              whileInView={{ 
+                opacity: 1, 
+                y: 0,
+                rotateX: 0,
+                scale: 1
+              }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.7,
+                delay: index * 0.15,
+                type: "spring",
+                stiffness: 60
+              }}
+              whileHover={{ 
+                scale: 1.05,
+                y: -10,
+                rotateY: 5,
+                transition: { duration: 0.3 }
+              }}
+              className="glass-card overflow-hidden hover-glow group cursor-pointer"
             >
-              <div className="aspect-video overflow-hidden">
-                <img
+              <div className="aspect-video overflow-hidden relative">
+                <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  whileHover={{ scale: 1.1 }}
                 />
+                <div className="absolute inset-0 bg-gradient-cosmic/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3 font-display">{project.title}</h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <motion.h3 
+                  className="text-xl font-semibold text-white mb-3 font-display group-hover:text-gradient transition-all duration-300"
+                  whileHover={{ scale: 1.02 }}
+                >
+                  {project.title}
+                </motion.h3>
+                <p className="text-white/70 mb-4 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
-                    <span
+                    <motion.span
                       key={tagIndex}
-                      className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs"
+                      whileHover={{ scale: 1.05 }}
+                      className="px-3 py-1 bg-gradient-neon/20 text-accent-light rounded-full text-xs border border-accent/30 hover:border-accent/60 transition-all backdrop-blur-sm"
                     >
                       {tag}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
-                <a
+                <motion.a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
+                  whileHover={{ scale: 1.05, x: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 text-primary-light hover:text-white text-sm font-medium group/link"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4 group-hover/link:rotate-45 transition-transform duration-300" />
                   View Project
-                </a>
+                </motion.a>
               </div>
             </motion.div>
           ))}
