@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Instagram } from "lucide-react";
-import keerthiProfile from "@/assets/keerthi-profile.jpg";
+import keerthiProfile from "/lovable-uploads/634d3fe4-37c8-4d9d-b55b-3fcd08dc66af.png";
 
 const HeroSection = () => {
   return (
