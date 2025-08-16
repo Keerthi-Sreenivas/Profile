@@ -4,7 +4,7 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Enterprise Account Engineer",
+    title: "Gen AI Solutions Architect",
     company: "Amazon Web Services (AWS)",
     period: "June 2024 - Current",
     description: "Acting as a trusted technical advisor for Resiliency, Security, AWS Architecture implementations for AWS Customers. Lead Q Business & Bedrock enablement sessions for AWS Customers & internal teams. Orchestrating PoCs of AI/ML AWS services with AWS Customers."
@@ -16,22 +16,10 @@ const experiences = [
     description: "Implemented 7+ end-to-end Observability PoC's for diverse teams. Executed near-real-time decommissioning insights for Database servers, resulting in substantial resource savings for up to 450 SQL and Oracle Database Servers. Championed the adoption of an Observability Mindset across Barclays, fostering a thriving community of over 2500 technology experts."
   },
   {
-    title: "Data Science Intern",
+    title: "Data Scientist",
     company: "Allogene Therapeutics - Cancer Research",
     period: "May 2022 - Dec 2022",
     description: "Developed a Data Issue tracker dashboard application in R to reduce time in communication issues in data by 70% which replaced existing licensed software thereby saving $80,000 annually. Worked with cross-functional teams to automate object extraction and performed ETL to store it in AWS S3 buckets."
-  },
-  {
-    title: "Teaching Assistant - Big Data",
-    company: "Simon Business School",
-    period: "Oct 2020 - May 2021",
-    description: "Conducted weekly sessions & taught 200+ students on Big data tools like: Hadoop, Hive, PySpark, Databricks. Assisted students in connecting and file sharing in Hadoop clusters hosted on AWS S3 and other ad-hoc data democratization tasks."
-  },
-  {
-    title: "Technical Instructor Intern",
-    company: "KITOLIT",
-    period: "Jul 2020 - Nov 2020",
-    description: "Designed the curriculum and produced Content for an experiential learning course 'Javascript for Middle School Kids' by creating fun and interactive lessons increasing enrollment by 45% Qtr over Qtr. Offered one-on-one Mentoring sessions generating revenue of $6,400."
   }
 ];
 

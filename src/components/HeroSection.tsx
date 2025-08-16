@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Instagram } from "lucide-react";
+import keerthiProfile from "@/assets/keerthi-profile.jpg";
 
 const HeroSection = () => {
   return (
@@ -21,12 +22,12 @@ const HeroSection = () => {
             <motion.h2 
               className="text-2xl text-primary-light mb-6 font-sans font-light"
             >
-              Enterprise Account Engineer at AWS
+              Gen AI Solutions Architect at AWS
             </motion.h2>
             <motion.p 
               className="text-white/70 mb-8 text-lg"
             >
-              Acting as a trusted technical advisor for AWS customers with expertise in AI/ML, Observability, and Cloud Architecture. Master's in Data Science with strong interest in Technology and Business intersection.
+              Trusted technical advisor for AWS customers with expertise in Developer experience & AI. Master's in Data Science with strong interest in Technology and Business intersection.
             </motion.p>
             <motion.div 
               className="flex gap-4"
@@ -63,7 +64,7 @@ const HeroSection = () => {
             className="order-1 md:order-2 flex justify-center"
           >
             <img
-              src="https://media.licdn.com/dms/image/v2/D4E03AQFH7wGO2rS_GA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729110926583?e=1750291200&v=beta&t=x7ibmf3Zwi2C4_mCSUQLIIEXR5OShbTLmpKTaRIydXY"
+              src={keerthiProfile}
               alt="Keerthi Sreenivas"
               className="rounded-full w-64 h-64 object-cover border-4 border-primary-dark/50 shadow-neon"
             />

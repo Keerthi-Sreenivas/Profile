@@ -1,25 +1,28 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import colorizerThumb from "@/assets/project-colorizer.jpg";
+import dogeThumb from "@/assets/project-doge-analysis.jpg";
+import marketingThumb from "@/assets/project-marketing-insights.jpg";
 
 const projects = [
   {
     title: "Colorizer - Deep Learning",
     description: "A Deep learning based application that converts a Black and White (Grayscale) Image/Video into a Colour video without human guidance.",
-    image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&h=300&fit=crop",
+    image: colorizerThumb,
     link: "https://docs.google.com/presentation/d/193X-n0sXoFbMR9dD7rxJxwM8n_GpOwNQ/edit?usp=sharing&ouid=116008293600462184270&rtpof=true&sd=true",
     tags: ["Deep Learning", "Computer Vision", "Python"]
   },
   {
     title: "Elon Musk Dogecoin Tweet Analysis - NLP",
     description: "Analyzed the sentiments around Elon's tweets about Dogecoin and impact of his tweets on the price of Doge coin.",
-    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=400&h=300&fit=crop",
+    image: dogeThumb,
     link: "https://github.com/Keerthi-Sreenivas/Elon_Musk-Doge-Tweet_Analysis/blob/main/Facts_derived_from_the_study.pdf",
     tags: ["NLP", "Sentiment Analysis", "Data Science"]
   },
   {
     title: "Marketing Insights - Statistics",
     description: "Digging through data and finding significant insights to advertise better products to customers of different backgrounds.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+    image: marketingThumb,
     link: "https://github.com/Keerthi-Sreenivas/statistics/blob/main/Project.pdf",
     tags: ["Statistics", "Marketing Analytics", "Data Visualization"]
   }
