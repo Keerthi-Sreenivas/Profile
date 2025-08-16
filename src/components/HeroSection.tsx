@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Instagram } from "lucide-react";
 import keerthiProfile from "/lovable-uploads/634d3fe4-37c8-4d9d-b55b-3fcd08dc66af.png";
-import ImageProcessor from "./ImageProcessor";
 
 const HeroSection = () => {
   return (
@@ -62,14 +61,13 @@ const HeroSection = () => {
             </motion.div>
           </div>
           <motion.div 
-            className="order-1 md:order-2 flex flex-col items-center"
+            className="order-1 md:order-2 flex justify-center"
           >
             <img
               src={keerthiProfile}
               alt="Keerthi Sreenivas"
               className="rounded-full w-64 h-64 object-cover border-4 border-primary-dark/50 shadow-neon"
             />
-            <ImageProcessor />
           </motion.div>
         </div>
       </motion.div>

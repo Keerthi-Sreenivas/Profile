@@ -4,10 +4,10 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Gen AI Solutions Architect",
+    title: "Gen AI Specialist Solutions Architect",
     company: "Amazon Web Services (AWS)",
-    period: "June 2024 - Current",
-    description: "Acting as a trusted technical advisor for Resiliency, Security, AWS Architecture implementations for AWS Customers. Lead Q Business & Bedrock enablement sessions for AWS Customers & internal teams. Orchestrating PoCs of AI/ML AWS services with AWS Customers."
+    period: "Jun 2024 - Current",
+    description: "Driving AI driven developer productivity enablement for Amazon Q Developer and Kiro across 50+ customers and 3000+ developers. Led to direct product adoption growth by 150% across multiple ISV customers and partners. Orchestrated multiple PoC's for Q Business and Q for Quicksight for Gen AI enablement for enterprise AWS Customer productivity use cases. Partnered with product teams for negotiating policy exceptions for Aurora MySQL upgrades for customers. Led 10+ resilience reviews, security assessments and business reviews for enterprise AWS customers providing actionable insights and delivered 5+ tailored enablement sessions."
   },
   {
     title: "Cloud/Infrastructure Engineer",
