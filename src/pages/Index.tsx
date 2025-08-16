@@ -2,8 +2,11 @@
 import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import EducationSection from "@/components/EducationSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import SkillsSection from "@/components/SkillsSection";
+import AchievementsSection from "@/components/AchievementsSection";
 
 const Index = () => {
   return (
@@ -14,8 +17,11 @@ const Index = () => {
     >
       <HeroSection />
       <ExperienceSection />
+      <EducationSection />
+      <ProjectsSection />
       <CertificationsSection />
       <SkillsSection />
+      <AchievementsSection />
     </motion.div>
   );
 };

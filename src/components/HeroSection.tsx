@@ -21,12 +21,12 @@ const HeroSection = () => {
             <motion.h2 
               className="text-2xl text-primary-light mb-6 font-sans font-light"
             >
-              Generative AI Specialist Solutions Architect
+              Enterprise Account Engineer at AWS
             </motion.h2>
             <motion.p 
               className="text-white/70 mb-8 text-lg"
             >
-              Enhancing developer productivity through innovative AI tools at AWS. AWS 3X Certified professional with expertise in cloud solutions and data science.
+              Acting as a trusted technical advisor for AWS customers with expertise in AI/ML, Observability, and Cloud Architecture. Master's in Data Science with strong interest in Technology and Business intersection.
             </motion.p>
             <motion.div 
               className="flex gap-4"

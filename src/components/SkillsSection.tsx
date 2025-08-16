@@ -4,24 +4,24 @@ import { Code2, Database, PenTool, Users } from "lucide-react";
 
 const skills = [
   {
-    category: "Technical",
+    category: "AWS Services",
     icon: <Code2 className="w-6 h-6" />,
-    items: ["AWS Services", "Python", "SQL", "ETL", "Git", "Elasticsearch"]
+    items: ["AWS OpenSearch", "AWS Bedrock", "AWS Q Business", "AWS CloudFormation", "AWS S3", "AWS CloudWatch", "AWS X-Ray"]
   },
   {
-    category: "Data Science",
+    category: "Programming",
     icon: <Database className="w-6 h-6" />,
-    items: ["Machine Learning", "Data Mining", "Statistical Analysis", "Big Data", "R Programming"]
+    items: ["Python", "R", "SQL", "JavaScript", "Ruby", "HTML/CSS", "KQL", "SPL"]
+  },
+  {
+    category: "Data & Analytics",
+    icon: <PenTool className="w-6 h-6" />,
+    items: ["Elasticsearch", "Kibana", "Logstash", "Kafka", "Splunk", "APM", "R Shiny"]
   },
   {
     category: "Professional",
     icon: <Users className="w-6 h-6" />,
-    items: ["Technical Leadership", "Customer Support", "Communication", "Presentations"]
-  },
-  {
-    category: "Tools",
-    icon: <PenTool className="w-6 h-6" />,
-    items: ["Databricks", "Jira", "AWS Tools", "Splunk"]
+    items: ["Mentorship", "Team Player", "DEI Advocate", "Technical Leadership"]
   }
 ];
 

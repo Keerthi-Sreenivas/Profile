@@ -4,28 +4,34 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Generative AI Specialist Solutions Architect",
+    title: "Enterprise Account Engineer",
     company: "Amazon Web Services (AWS)",
-    period: "June 2024 - Present",
-    description: "Specializing in Amazon Q Developer, promoting AI adoption best practices and facilitating AWS customers in utilizing AI to boost developer productivity."
+    period: "June 2024 - Current",
+    description: "Acting as a trusted technical advisor for Resiliency, Security, AWS Architecture implementations for AWS Customers. Lead Q Business & Bedrock enablement sessions for AWS Customers & internal teams. Orchestrating PoCs of AI/ML AWS services with AWS Customers."
   },
   {
-    title: "Enterprise Account Engineer II",
-    company: "Amazon Web Services (AWS)",
-    period: "June 2024 - March 2025",
-    description: "Led operations for GovCloud implementations and AI feature launches for AWS ISV executive customers. Conducted workshops for Amazon OpenSearch, Amazon Q-developer, and Amazon Bedrock."
+    title: "Cloud/Infrastructure Engineer",
+    company: "Barclays - Global Technology Infrastructure Services",
+    period: "Jan 2023 - June 2024",
+    description: "Implemented 7+ end-to-end Observability PoC's for diverse teams. Executed near-real-time decommissioning insights for Database servers, resulting in substantial resource savings for up to 450 SQL and Oracle Database Servers. Championed the adoption of an Observability Mindset across Barclays, fostering a thriving community of over 2500 technology experts."
   },
   {
-    title: "Cloud and Infrastructure Engineer",
-    company: "Barclays",
-    period: "January 2023 - June 2024",
-    description: "Implemented end-to-end observability data pipelines and championed data-driven conversations through orchestration of data proof of concepts."
+    title: "Data Science Intern",
+    company: "Allogene Therapeutics - Cancer Research",
+    period: "May 2022 - Dec 2022",
+    description: "Developed a Data Issue tracker dashboard application in R to reduce time in communication issues in data by 70% which replaced existing licensed software thereby saving $80,000 annually. Worked with cross-functional teams to automate object extraction and performed ETL to store it in AWS S3 buckets."
   },
   {
-    title: "Founder",
-    company: "QriosityByKeerthi",
-    period: "March 2015 - Present",
-    description: "Established a community of 13,000 AI learners on Instagram. Developed audio-visual content that simplifies complex technical concepts."
+    title: "Teaching Assistant - Big Data",
+    company: "Simon Business School",
+    period: "Oct 2020 - May 2021",
+    description: "Conducted weekly sessions & taught 200+ students on Big data tools like: Hadoop, Hive, PySpark, Databricks. Assisted students in connecting and file sharing in Hadoop clusters hosted on AWS S3 and other ad-hoc data democratization tasks."
+  },
+  {
+    title: "Technical Instructor Intern",
+    company: "KITOLIT",
+    period: "Jul 2020 - Nov 2020",
+    description: "Designed the curriculum and produced Content for an experiential learning course 'Javascript for Middle School Kids' by creating fun and interactive lessons increasing enrollment by 45% Qtr over Qtr. Offered one-on-one Mentoring sessions generating revenue of $6,400."
   }
 ];
 
