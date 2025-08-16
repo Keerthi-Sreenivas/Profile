@@ -24,27 +24,27 @@ export default {
       },
       colors: {
         background: {
-          DEFAULT: '#0A0A0F',
-          dark: '#060613'
+          DEFAULT: '#0F0A0A',
+          dark: '#130606'
         },
         primary: {
-          light: '#4A90E2',
-          DEFAULT: '#2C6FD1',
-          dark: '#1E4B8C'
+          light: '#FF8A50',
+          DEFAULT: '#FF6B35',
+          dark: '#E55527'
         },
         accent: {
-          light: '#8C52FF',
-          DEFAULT: '#6A3AFF',
-          dark: '#4D27B3'
+          light: '#B266FF',
+          DEFAULT: '#9A4DFF',
+          dark: '#7A3BCC'
         }
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(circle at top left, rgba(74, 144, 226, 0.1), transparent 50%)',
-        'gradient-dark': 'linear-gradient(to bottom right, rgba(106, 58, 255, 0.1), rgba(44, 111, 209, 0.1))'
+        'gradient-radial': 'radial-gradient(circle at top left, rgba(255, 138, 80, 0.1), transparent 50%)',
+        'gradient-dark': 'linear-gradient(to bottom right, rgba(154, 77, 255, 0.1), rgba(255, 107, 53, 0.1))'
       },
       boxShadow: {
-        'neon': '0 0 15px rgba(74, 144, 226, 0.3)',
-        'glow': '0 0 20px rgba(106, 58, 255, 0.2)'
+        'neon': '0 0 15px rgba(255, 138, 80, 0.3)',
+        'glow': '0 0 20px rgba(154, 77, 255, 0.2)'
       }
     }
   },

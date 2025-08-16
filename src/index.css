@@ -7,8 +7,8 @@
   body {
     @apply bg-background text-white/90 font-sans antialiased;
     background-image: 
-      radial-gradient(circle at top left, rgba(74, 144, 226, 0.05), transparent 50%),
-      linear-gradient(to bottom right, rgba(106, 58, 255, 0.05), transparent);
+      radial-gradient(circle at top left, rgba(255, 138, 80, 0.05), transparent 50%),
+      linear-gradient(to bottom right, rgba(154, 77, 255, 0.05), transparent);
   }
 
   h1, h2, h3 {
@@ -19,5 +19,177 @@
 @layer utilities {
   .glass-card {
     @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg rounded-xl;
+  }
+  
+  .glass-nav {
+    @apply backdrop-blur-xl bg-black/20 border border-white/10;
+  }
+  
+  .btn-cosmic {
+    @apply bg-gradient-to-r from-primary to-accent text-white font-medium px-6 py-3 rounded-xl hover:shadow-neon transition-all duration-300;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-light to-accent-light bg-clip-text text-transparent;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 138, 80, 0.3);
+  }
+  
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  .progress-cosmic {
+    @apply bg-gradient-to-r from-primary via-accent to-primary-light;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  .animate-zoom-in {
+    animation: zoomIn 0.5s ease-out forwards;
+  }
+  
+  .blur-backdrop {
+    backdrop-filter: blur(20px);
+  }
+  
+  .bg-gradient-cosmic {
+    background: linear-gradient(135deg, rgb(255, 107, 53), rgb(154, 77, 255));
+  }
+  
+  .bg-gradient-neon {
+    background: linear-gradient(135deg, rgb(178, 102, 255), rgb(255, 138, 80));
+  }
+  
+  .bg-gradient-cyber {
+    background: linear-gradient(180deg, rgb(154, 77, 255), rgb(255, 107, 53));
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 138, 80, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(255, 138, 80, 0.6), 0 0 30px rgba(154, 77, 255, 0.3); }
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
