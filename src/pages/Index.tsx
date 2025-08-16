@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
@@ -10,19 +11,37 @@ import AchievementsSection from "@/components/AchievementsSection";
 
 const Index = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <HeroSection />
-      <ExperienceSection />
-      <EducationSection />
-      <ProjectsSection />
-      <CertificationsSection />
-      <SkillsSection />
-      <AchievementsSection />
-    </motion.div>
+    <>
+      <Navigation />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="pt-20" // Add padding to account for fixed navigation
+      >
+        <section id="home">
+          <HeroSection />
+        </section>
+        <section id="experience">
+          <ExperienceSection />
+        </section>
+        <section id="education">
+          <EducationSection />
+        </section>
+        <section id="projects">
+          <ProjectsSection />
+        </section>
+        <section id="certifications">
+          <CertificationsSection />
+        </section>
+        <section id="skills">
+          <SkillsSection />
+        </section>
+        <section id="achievements">
+          <AchievementsSection />
+        </section>
+      </motion.div>
+    </>
   );
 };
 
