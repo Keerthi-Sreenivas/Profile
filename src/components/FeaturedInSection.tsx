@@ -77,16 +77,16 @@ const FeaturedInSection = () => {
                   }}
                 >
                   <img 
-                    src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                    src={video.id === "sF6izpB_A0Y" ? "https://img.youtube.com/vi/sF6izpB_A0Y/maxresdefault.jpg" : "https://img.youtube.com/vi/un3dSTKusQU/maxresdefault.jpg"}
                     alt={video.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-32 object-cover"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       className="p-3 bg-red-600 rounded-full shadow-lg"
                     >
-                      <Play className="w-6 h-6 text-white ml-1" />
+                      <Play className="w-5 h-5 text-white ml-1" />
                     </motion.div>
                   </div>
                 </motion.div>
@@ -100,14 +100,14 @@ const FeaturedInSection = () => {
                         transition: { duration: 0.2 }
                       }}
                     >
-                      <Youtube className="w-5 h-5 text-white" />
+                      <Youtube className="w-4 h-4 text-white" />
                     </motion.div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-base font-semibold text-white group-hover:text-primary transition-colors duration-300">
                       {video.title}
                     </h3>
                   </div>
                   
-                  <p className="text-white/70 mb-4 leading-relaxed text-sm">
+                  <p className="text-white/70 mb-3 leading-relaxed text-xs">
                     {video.description}
                   </p>
                   
@@ -117,7 +117,7 @@ const FeaturedInSection = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center gap-2 px-5 py-2 bg-gradient-cosmic text-white font-medium rounded-lg hover:shadow-neon transition-all duration-300 text-sm"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-cosmic text-white font-medium rounded-lg hover:shadow-neon transition-all duration-300 text-xs"
                   >
                     <Play className="w-4 h-4" />
                     Watch Video

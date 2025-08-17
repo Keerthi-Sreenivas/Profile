@@ -5,42 +5,42 @@ const achievements = [
   {
     title: "Creative Collision Challenge 2022",
     description: "Won 1st Place at the University of Rochester AIN Entrepreneurship cell's yearly pitching competition.",
-    icon: <Trophy className="w-6 h-6" />,
+    icon: <Trophy className="w-4 h-4" />,
     year: "2022",
     link: "https://www.rochester.edu/entrepreneurship/"
   },
   {
     title: "Smart India Hackathon 2020",
     description: "Won 2nd place All India for developing a Smart Yoga Instructor with feedback using Deep Learning.",
-    icon: <Trophy className="w-6 h-6" />,
+    icon: <Trophy className="w-4 h-4" />,
     year: "2020",
     link: "https://www.sih.gov.in/"
   },
   {
     title: "Women Entrepreneurship Week Candidate",
     description: "Selected to meet a Senior Director from Jio Industries for discussion about the Smart Yoga Instructor application at AIC Incubation Center.",
-    icon: <Users className="w-6 h-6" />,
+    icon: <Users className="w-4 h-4" />,
     year: "2020",
     link: "https://www.iiitkottayam.ac.in/"
   },
   {
     title: "Elected Cultural Secretary",
     description: "Conducted 15+ events with a footprint of more than 300+ students and managed a team of 25 students for fundraising and event organization.",
-    icon: <Users className="w-6 h-6" />,
+    icon: <Users className="w-4 h-4" />,
     year: "2019-2021",
     link: "https://www.iiitkottayam.ac.in/#!/culturalClub"
   },
   {
     title: "ACM/CSI/IEEE-CS Conference Presentation",
     description: "Author of 'IoT based Smart Medicine Reminder Kit' at ACM/CSI/IEEE-CS Research and Industry Symposium at IIIT Kottayam.",
-    icon: <Presentation className="w-6 h-6" />,
+    icon: <Presentation className="w-4 h-4" />,
     year: "2021",
     link: "https://www.iiitkottayam.ac.in/"
   },
   {
     title: "Grace Hopper Conference 2022",
     description: "Attended Grace Hopper 2022 Conference with University Scholarship from University of Rochester.",
-    icon: <BookOpen className="w-6 h-6" />,
+    icon: <BookOpen className="w-4 h-4" />,
     year: "2022",
     link: "https://ghc.anitab.org/"
   }
@@ -131,43 +131,31 @@ const AchievementsSection = () => {
                 transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.95 }}
-              className="glass-card p-8 hover-glow group cursor-pointer"
+              className="glass-card p-5 hover-glow group cursor-pointer"
             >
-              <div className="flex items-start gap-6">
+              <div className="flex items-start gap-4">
                 <motion.div 
-                  className="p-3 bg-gradient-neon rounded-xl flex-shrink-0 shadow-glow"
+                  className="p-2 bg-gradient-neon rounded-lg flex-shrink-0"
                   whileHover={{ 
-                    scale: 1.2,
-                    rotate: -10,
+                    scale: 1.05,
                     transition: { duration: 0.2 }
                   }}
                 >
-                  <div className="text-white w-6 h-6 flex items-center justify-center">
+                  <div className="text-white w-4 h-4 flex items-center justify-center">
                     {achievement.icon}
                   </div>
                 </motion.div>
                 <div className="flex-1">
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex flex-col gap-2">
-                      <motion.h3 
-                        className="text-lg font-semibold text-white font-display group-hover:text-gradient transition-all duration-300"
-                        whileHover={{ scale: 1.02 }}
-                      >
+                  <div className="flex items-start justify-between mb-2">
+                    <div className="flex flex-col gap-1">
+                      <h3 className="text-lg font-semibold text-white font-display group-hover:text-primary transition-colors duration-300">
                         {achievement.title}
-                      </motion.h3>
-                      <motion.span 
-                        className="px-3 py-1 bg-gradient-cosmic/30 text-accent-light rounded-full text-xs border border-accent/30 w-fit"
-                        whileHover={{ scale: 1.05 }}
-                      >
+                      </h3>
+                      <span className="px-2 py-1 bg-gradient-cosmic/30 text-accent-light rounded-full text-xs border border-accent/30 w-fit">
                         {achievement.year}
-                      </motion.span>
+                      </span>
                     </div>
-                    <motion.div
-                      whileHover={{ scale: 1.2, rotate: 45 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-primary-light transition-colors" />
-                    </motion.div>
+                    <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-primary-light transition-colors" />
                   </div>
                   <motion.p 
                     className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300"

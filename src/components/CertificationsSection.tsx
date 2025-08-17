@@ -113,11 +113,11 @@ const CertificationsSection = () => {
                 transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.95 }}
-              className="glass-card p-8 hover-glow group cursor-pointer"
+              className="glass-card p-5 hover-glow group cursor-pointer"
             >
               <div className="flex flex-col items-center text-center">
                 <motion.div 
-                  className="w-28 h-28 mb-6 rounded-full overflow-hidden shadow-neon bg-white/10 backdrop-blur-sm border border-white/20"
+                  className="w-20 h-20 mb-4 rounded-full overflow-hidden shadow-neon bg-white/10 backdrop-blur-sm border border-white/20"
                   whileHover={{ 
                     scale: 1.1,
                     rotate: 5,

@@ -116,7 +116,7 @@ const ExperienceSection = () => {
                   <img 
                     src={experience.logo} 
                     alt={`${experience.company} logo`}
-                    className="w-10 h-10 object-contain"
+                    className="w-8 h-8 object-contain"
                   />
                 </motion.div>
                 <div className="flex-1">
