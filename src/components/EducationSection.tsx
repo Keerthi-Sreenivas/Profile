@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
+import rochesterLogo from "../assets/logos/university-of-rochester-logo.svg";
+import iiitKottayamLogo from "../assets/logos/iiit-kottayam-logo.png";
 
 const education = [
   {
@@ -8,7 +10,8 @@ const education = [
     period: "2021 - 2022",
     gpa: "3.7 out of 4.0",
     description: "Teaching Assistant for Big Data at Simon Business School. Research assistant for Bio-Medical Image data preprocessing for U-Net Deep Learning Algorithm. Grace Hopper 2022 Conference attendee with University Scholarship.",
-    coursework: ["Data Science at Scale", "Machine Learning", "Applied Statistical Methods", "Data Mining", "Technical Entrepreneurship", "Time Series Analysis"]
+    coursework: ["Data Science at Scale", "Machine Learning", "Applied Statistical Methods", "Data Mining", "Technical Entrepreneurship", "Time Series Analysis"],
+    logo: rochesterLogo
   },
   {
     degree: "Bachelor of Technology in Computer Science and Engineering (Hons.)",
@@ -16,7 +19,8 @@ const education = [
     period: "2017 - 2021",
     gpa: "8.96 out of 10",
     description: "Main Author for research presentation 'IoT based Smart Medicine Reminder Kit' at ACM/CSI/IEEE-CS Research and Industry Symposium. Co-Founded Proxima, an Image processing based Start-up for Smart Badminton and Yoga instruction.",
-    coursework: ["Artificial Intelligence", "Data Warehousing and Data Mining", "Big Data Analytics", "Cloud Computing", "Cryptography", "Blockchain Technology"]
+    coursework: ["Artificial Intelligence", "Data Warehousing and Data Mining", "Big Data Analytics", "Cloud Computing", "Cryptography", "Blockchain Technology"],
+    logo: iiitKottayamLogo
   }
 ];
 
@@ -95,14 +99,18 @@ const EducationSection = () => {
             >
               <div className="flex items-start gap-6">
                 <motion.div 
-                  className="p-3 bg-gradient-neon rounded-xl shadow-glow"
+                  className="p-3 bg-white/10 backdrop-blur rounded-xl shadow-glow"
                   whileHover={{ 
                     scale: 1.15,
                     rotate: -5,
                     transition: { duration: 0.2 }
                   }}
                 >
-                  <GraduationCap className="w-7 h-7 text-white" />
+                  <img 
+                    src={edu.logo} 
+                    alt={`${edu.school} logo`}
+                    className="w-12 h-12 object-contain"
+                  />
                 </motion.div>
                 <div className="flex-1">
                   <motion.h3 
