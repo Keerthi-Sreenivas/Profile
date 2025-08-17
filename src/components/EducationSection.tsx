@@ -9,7 +9,7 @@ const education = [
     school: "University of Rochester, New York",
     period: "2021 - 2022",
     gpa: "3.7 out of 4.0",
-    description: "Teaching Assistant for Big Data at Simon Business School. Research assistant for Bio-Medical Image data preprocessing for U-Net Deep Learning Algorithm. Grace Hopper 2022 Conference attendee with University Scholarship.",
+    description: "Teaching Assistant for Big Data at Simon Business School. Research assistant for biomedical image preprocessing using U-Net Deep Learning. Grace Hopper 2022 Conference scholar.",
     coursework: ["Data Science at Scale", "Machine Learning", "Applied Statistical Methods", "Data Mining", "Technical Entrepreneurship", "Time Series Analysis"],
     logo: rochesterLogo
   },
@@ -18,7 +18,7 @@ const education = [
     school: "Indian Institute of Information Technology (IIIT), Kottayam",
     period: "2017 - 2021",
     gpa: "8.96 out of 10",
-    description: "Main Author for research presentation 'IoT based Smart Medicine Reminder Kit' at ACM/CSI/IEEE-CS Research and Industry Symposium. Co-Founded Proxima, an Image processing based Start-up for Smart Badminton and Yoga instruction.",
+    description: "Main Author for 'IoT based Smart Medicine Reminder Kit' research at ACM/CSI/IEEE-CS Symposium. Co-Founded Proxima, an image processing startup for Smart Badminton and Yoga instruction.",
     coursework: ["Artificial Intelligence", "Data Warehousing and Data Mining", "Big Data Analytics", "Cloud Computing", "Cryptography", "Blockchain Technology"],
     logo: iiitKottayamLogo
   }

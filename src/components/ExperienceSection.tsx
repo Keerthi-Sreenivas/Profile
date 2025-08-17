@@ -11,28 +11,28 @@ const experiences = [
     title: "Gen AI Specialist Solutions Architect",
     company: "Amazon Web Services (AWS)",
     period: "Jun 2024 - Current",
-    description: "Driving AI driven developer productivity enablement for Amazon Q Developer and Kiro across 50+ customers and 3000+ developers. Led to direct product adoption growth by 150% across multiple ISV customers and partners. Orchestrated multiple PoC's for Q Business and Q for Quicksight for Gen AI enablement for enterprise AWS Customer productivity use cases. Partnered with product teams for negotiating policy exceptions for Aurora MySQL upgrades for customers. Led 10+ resilience reviews, security assessments and business reviews for enterprise AWS customers providing actionable insights and delivered 5+ tailored enablement sessions.",
+    description: "Led AI-driven developer productivity initiatives across 50+ customers and 3000+ developers, achieving 150% adoption growth. Delivered enterprise solutions, resilience reviews, and tailored enablement sessions for AWS customers.",
     logo: awsLogo
   },
   {
     title: "Founder & Content Creator",
     company: "Qriosity (@qriositybykeerthi)",
     period: "2020 - Current",
-    description: "Founded and lead Qriosity, a platform focused on technology education and curiosity-driven learning. Created engaging content around AI, data science, and technology trends. Built a community of tech enthusiasts and professionals. Developed educational resources and tutorials to democratize technical knowledge and inspire others to explore the intersection of technology and innovation.",
+    description: "Founded technology education platform focused on AI, data science, and emerging tech trends. Built engaged community of professionals through educational content and tutorials.",
     logo: qriosityLogo
   },
   {
     title: "Cloud/Infrastructure Engineer",
     company: "Barclays - Global Technology Infrastructure Services",
     period: "Jan 2023 - June 2024",
-    description: "Implemented 7+ end-to-end Observability PoC's for diverse teams. Executed near-real-time decommissioning insights for Database servers, resulting in substantial resource savings for up to 450 SQL and Oracle Database Servers. Championed the adoption of an Observability Mindset across Barclays, fostering a thriving community of over 2500 technology experts.",
+    description: "Implemented 7+ end-to-end Observability PoCs and executed near-real-time database decommissioning insights, achieving substantial cost savings across 450+ servers. Led Observability adoption across 2500+ technology experts.",
     logo: barclaysLogo
   },
   {
     title: "Data Scientist",
     company: "Allogene Therapeutics - Cancer Research",
     period: "May 2022 - Dec 2022",
-    description: "Developed a Data Issue tracker dashboard application in R to reduce time in communication issues in data by 70% which replaced existing licensed software thereby saving $80,000 annually. Worked with cross-functional teams to automate object extraction and performed ETL to store it in AWS S3 buckets.",
+    description: "Developed R-based Data Issue tracker dashboard, reducing communication delays by 70% and saving $80,000 annually. Automated object extraction and ETL processes with AWS S3 integration.",
     logo: allogeneLogo
   }
 ];

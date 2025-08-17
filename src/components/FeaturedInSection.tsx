@@ -1,6 +1,21 @@
 import { motion } from "framer-motion";
 import { Play, Youtube } from "lucide-react";
 
+const featuredVideos = [
+  {
+    id: "sF6izpB_A0Y",
+    title: "Grace Hopper Celebration 2022 - Experience & Insights",
+    description: "Sharing key takeaways from attending GHC 2022 with University of Rochester scholarship support.",
+    url: "https://youtu.be/sF6izpB_A0Y?si=cUsXan5QddSK8j4Q"
+  },
+  {
+    id: "un3dSTKusQU", 
+    title: "Grace Hopper Celebration 2022 - Technical Perspectives",
+    description: "Discussing technical sessions, networking opportunities, and career insights from GHC 2022.",
+    url: "https://youtu.be/un3dSTKusQU?si=N4oaTDSLwIYDVsrj"
+  }
+];
+
 const FeaturedInSection = () => {
   return (
     <section className="py-12 px-4 relative overflow-hidden">
@@ -25,7 +40,7 @@ const FeaturedInSection = () => {
         }}
       />
       
-      <div className="container mx-auto max-w-4xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.h2 
           initial={{ opacity: 0, y: -20, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -37,78 +52,81 @@ const FeaturedInSection = () => {
           }}
           className="text-3xl font-bold text-white mb-8 text-center text-glow"
         >
-          Featured In
+          Featured Content
         </motion.h2>
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ 
-            duration: 0.4,
-            delay: 0.1
-          }}
-          className="glass-card p-6 hover-glow group cursor-pointer"
-        >
-          <div className="flex flex-col md:flex-row items-start gap-6">
-            <motion.div 
-              className="relative overflow-hidden rounded-xl shadow-neon w-full md:w-80"
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
+        <div className="grid md:grid-cols-2 gap-6">
+          {featuredVideos.map((video, index) => (
+            <motion.div
+              key={video.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.4,
+                delay: index * 0.1
               }}
+              className="glass-card p-5 hover-glow group cursor-pointer"
             >
-              <img 
-                src="https://img.youtube.com/vi/sF6izpB_A0Y/maxresdefault.jpg"
-                alt="YouTube Video Thumbnail"
-                className="w-full h-48 object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="p-3 bg-red-600 rounded-full shadow-lg"
-                >
-                  <Play className="w-8 h-8 text-white ml-1" />
-                </motion.div>
-              </div>
-            </motion.div>
-            
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex flex-col gap-4">
                 <motion.div 
-                  className="p-2 bg-gradient-cosmic rounded-lg"
+                  className="relative overflow-hidden rounded-lg w-full"
                   whileHover={{ 
                     scale: 1.02,
                     transition: { duration: 0.2 }
                   }}
                 >
-                  <Youtube className="w-6 h-6 text-white" />
+                  <img 
+                    src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                    alt={video.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="p-3 bg-red-600 rounded-full shadow-lg"
+                    >
+                      <Play className="w-6 h-6 text-white ml-1" />
+                    </motion.div>
+                  </div>
                 </motion.div>
-                <motion.h3 
-                  className="text-xl font-semibold text-white group-hover:text-primary transition-colors duration-300"
-                >
-                  YouTube Feature
-                </motion.h3>
+                
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <motion.div 
+                      className="p-2 bg-gradient-cosmic rounded-lg"
+                      whileHover={{ 
+                        scale: 1.02,
+                        transition: { duration: 0.2 }
+                      }}
+                    >
+                      <Youtube className="w-5 h-5 text-white" />
+                    </motion.div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors duration-300">
+                      {video.title}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-white/70 mb-4 leading-relaxed text-sm">
+                    {video.description}
+                  </p>
+                  
+                  <motion.a
+                    href={video.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="inline-flex items-center gap-2 px-5 py-2 bg-gradient-cosmic text-white font-medium rounded-lg hover:shadow-neon transition-all duration-300 text-sm"
+                  >
+                    <Play className="w-4 h-4" />
+                    Watch Video
+                  </motion.a>
+                </div>
               </div>
-              
-              <p className="text-white/70 mb-6 leading-relaxed">
-                Watch my featured content discussing AI, data science, and technology innovations. Exploring the intersection of cutting-edge technology and practical business applications.
-              </p>
-              
-              <motion.a
-                href="https://youtu.be/sF6izpB_A0Y?si=cUsXan5QddSK8j4Q"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-cosmic text-white font-medium rounded-xl hover:shadow-neon transition-all duration-300"
-              >
-                <Play className="w-4 h-4" />
-                Watch Video
-              </motion.a>
-            </div>
-          </div>
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

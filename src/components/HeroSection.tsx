@@ -27,7 +27,7 @@ const HeroSection = () => {
             <motion.p 
               className="text-white/70 mb-8 text-lg"
             >
-              Trusted technical advisor for AWS customers with expertise in Developer experience & AI. Master's in Data Science with strong interest in Technology and Business intersection.
+              Trusted AWS Solutions Architect specializing in Gen AI and Developer Experience. Master's in Data Science with expertise in AI-driven business solutions.
             </motion.p>
             <motion.div 
               className="flex gap-4"
