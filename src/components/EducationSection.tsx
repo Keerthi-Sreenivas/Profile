@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import rochesterLogo from "../assets/logos/university-of-rochester-logo.svg";
-import iiitKottayamLogo from "../assets/logos/iiit-kottayam-logo.png";
+import iiitKottayamLogo from "../assets/logos/iiit-kottayam-correct.png";
 
 const education = [
   {
@@ -109,7 +109,7 @@ const EducationSection = () => {
                   <img 
                     src={edu.logo} 
                     alt={`${edu.school} logo`}
-                    className="w-12 h-12 object-contain"
+                    className="w-10 h-10 object-contain"
                   />
                 </motion.div>
                 <div className="flex-1">
