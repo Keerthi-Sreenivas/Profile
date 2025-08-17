@@ -5,6 +5,8 @@ const navItems = [
   { id: "home", label: "Home" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
+  { id: "featured", label: "Featured" },
+  { id: "publications", label: "Publications" },
   { id: "projects", label: "Projects" },
   { id: "certifications", label: "Certifications" },
   { id: "skills", label: "Skills" },
@@ -48,20 +50,20 @@ const Navigation = () => {
     <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200"
+      className="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/10"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center py-4">
-          <div className="flex space-x-1 bg-gray-100 rounded-full p-1">
+          <div className="flex space-x-1 bg-white/5 backdrop-blur-sm rounded-full p-1 border border-white/10">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`
-                  relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300
+                  relative px-3 py-2 text-xs font-medium rounded-full transition-all duration-300
                   ${activeSection === item.id 
-                    ? "text-white bg-blue-600 shadow-md" 
-                    : "text-gray-600 hover:text-gray-900 hover:bg-white"
+                    ? "text-white bg-gradient-cosmic shadow-neon" 
+                    : "text-white/70 hover:text-white hover:bg-white/10"
                   }
                 `}
               >
@@ -69,7 +71,7 @@ const Navigation = () => {
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-blue-600 rounded-full -z-10"
+                    className="absolute inset-0 bg-gradient-cosmic rounded-full -z-10"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
