@@ -51,27 +51,51 @@ const FeaturedInSection = () => {
           }}
           className="glass-card p-6 hover-glow group cursor-pointer"
         >
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col md:flex-row items-start gap-6">
             <motion.div 
-              className="p-3 bg-gradient-cosmic rounded-xl shadow-neon"
+              className="relative overflow-hidden rounded-xl shadow-neon w-full md:w-80"
               whileHover={{ 
-                scale: 1.1,
-                rotate: 5,
+                scale: 1.05,
                 transition: { duration: 0.2 }
               }}
             >
-              <Youtube className="w-8 h-8 text-white" />
+              <img 
+                src="https://img.youtube.com/vi/sF6izpB_A0Y/maxresdefault.jpg"
+                alt="YouTube Video Thumbnail"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="p-3 bg-red-600 rounded-full shadow-lg"
+                >
+                  <Play className="w-8 h-8 text-white ml-1" />
+                </motion.div>
+              </div>
             </motion.div>
             
             <div className="flex-1">
-              <motion.h3 
-                className="text-xl font-semibold text-white mb-2 group-hover:text-gradient transition-all duration-300"
-                whileHover={{ scale: 1.02 }}
-              >
-                YouTube Feature
-              </motion.h3>
-              <p className="text-white/70 mb-4">
-                Watch my featured content discussing AI, data science, and technology innovations
+              <div className="flex items-center gap-3 mb-4">
+                <motion.div 
+                  className="p-2 bg-gradient-cosmic rounded-lg shadow-neon"
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: 5,
+                    transition: { duration: 0.2 }
+                  }}
+                >
+                  <Youtube className="w-6 h-6 text-white" />
+                </motion.div>
+                <motion.h3 
+                  className="text-xl font-semibold text-white group-hover:text-gradient transition-all duration-300"
+                  whileHover={{ scale: 1.02 }}
+                >
+                  YouTube Feature
+                </motion.h3>
+              </div>
+              
+              <p className="text-white/70 mb-6 leading-relaxed">
+                Watch my featured content discussing AI, data science, and technology innovations. Exploring the intersection of cutting-edge technology and practical business applications.
               </p>
               
               <motion.a
