@@ -27,39 +27,37 @@ const education = [
 const EducationSection = () => {
   return (
     <section className="py-12 px-4 relative overflow-hidden">
-      {/* Animated background elements */}
+      {/* Subtle background elements */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-cyber opacity-20"
+        className="absolute inset-0 bg-gradient-cyber opacity-5"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.2 }}
+        whileInView={{ opacity: 0.05 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.2 }}
+        transition={{ duration: 2 }}
       />
       <motion.div 
-        className="absolute top-32 right-16 w-40 h-40 bg-gradient-neon rounded-full blur-3xl"
+        className="absolute top-32 right-16 w-32 h-32 bg-gradient-neon rounded-full blur-3xl opacity-8"
         animate={{ 
-          x: [0, -60, 0],
-          y: [0, 40, 0],
-          scale: [1, 1.3, 1]
+          x: [0, -20, 0],
+          y: [0, 15, 0]
         }}
         transition={{ 
-          duration: 10, 
+          duration: 18, 
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
       />
       <motion.div 
-        className="absolute bottom-32 left-16 w-28 h-28 bg-gradient-cosmic rounded-full blur-2xl"
+        className="absolute bottom-32 left-16 w-20 h-20 bg-gradient-cosmic rounded-full blur-2xl opacity-8"
         animate={{ 
-          x: [0, 50, 0],
-          y: [0, -25, 0],
-          scale: [1, 0.9, 1]
+          x: [0, 25, 0],
+          y: [0, -12, 0]
         }}
         transition={{ 
-          duration: 7, 
+          duration: 20, 
           repeat: Infinity, 
           ease: "easeInOut",
-          delay: 3
+          delay: 8
         }}
       />
       
@@ -81,28 +79,24 @@ const EducationSection = () => {
           {education.map((edu, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -120 : 120, rotateY: 10 }}
-              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ 
-                duration: 0.8,
-                delay: index * 0.2,
-                type: "spring",
-                stiffness: 70
+                duration: 0.4,
+                delay: index * 0.1
               }}
               whileHover={{ 
-                scale: 1.02,
-                y: -8,
-                transition: { duration: 0.3 }
+                y: -2,
+                transition: { duration: 0.2 }
               }}
-              className="glass-card p-8 hover-glow group cursor-pointer"
+              className="glass-card p-6 hover-glow group cursor-pointer"
             >
               <div className="flex items-start gap-6">
                 <motion.div 
-                  className="p-3 bg-white/10 backdrop-blur rounded-xl shadow-glow"
+                  className="p-3 bg-white/10 backdrop-blur rounded-xl"
                   whileHover={{ 
-                    scale: 1.15,
-                    rotate: -5,
+                    scale: 1.05,
                     transition: { duration: 0.2 }
                   }}
                 >
@@ -114,8 +108,7 @@ const EducationSection = () => {
                 </motion.div>
                 <div className="flex-1">
                   <motion.h3 
-                    className="text-2xl font-semibold text-white mb-3 font-display group-hover:text-gradient transition-all duration-300"
-                    whileHover={{ scale: 1.02 }}
+                    className="text-xl font-semibold text-white mb-3 font-display group-hover:text-primary transition-colors duration-300"
                   >
                     {edu.degree}
                   </motion.h3>
@@ -132,8 +125,6 @@ const EducationSection = () => {
                   </div>
                   <motion.p 
                     className="text-white/75 leading-relaxed mb-6 group-hover:text-white transition-colors duration-300"
-                    initial={{ opacity: 0.75 }}
-                    whileHover={{ opacity: 1 }}
                   >
                     {edu.description}
                   </motion.p>
@@ -141,7 +132,7 @@ const EducationSection = () => {
                     {edu.coursework.map((course, courseIndex) => (
                       <motion.span
                         key={courseIndex}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.02 }}
                         className="px-4 py-2 bg-gradient-cosmic/20 text-primary-light rounded-full text-sm border border-primary/30 hover:border-primary/60 transition-all backdrop-blur-sm"
                       >
                         {course}

@@ -40,39 +40,37 @@ const experiences = [
 const ExperienceSection = () => {
   return (
     <section className="py-12 px-4 relative overflow-hidden">
-      {/* Animated background elements */}
+      {/* Subtle background elements */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-dark opacity-30"
+        className="absolute inset-0 bg-gradient-dark opacity-5"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.3 }}
+        whileInView={{ opacity: 0.05 }}
         viewport={{ once: true }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
       />
       <motion.div 
-        className="absolute top-20 left-10 w-32 h-32 bg-gradient-cosmic rounded-full blur-3xl"
+        className="absolute top-20 left-10 w-24 h-24 bg-gradient-cosmic rounded-full blur-3xl opacity-10"
         animate={{ 
-          x: [0, 50, 0],
-          y: [0, -30, 0],
-          scale: [1, 1.2, 1]
+          x: [0, 20, 0],
+          y: [0, -10, 0]
         }}
         transition={{ 
-          duration: 8, 
+          duration: 12, 
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
       />
       <motion.div 
-        className="absolute bottom-20 right-10 w-24 h-24 bg-gradient-neon rounded-full blur-2xl"
+        className="absolute bottom-20 right-10 w-20 h-20 bg-gradient-neon rounded-full blur-2xl opacity-10"
         animate={{ 
-          x: [0, -40, 0],
-          y: [0, 20, 0],
-          scale: [1, 0.8, 1]
+          x: [0, -15, 0],
+          y: [0, 10, 0]
         }}
         transition={{ 
-          duration: 6, 
+          duration: 15, 
           repeat: Infinity, 
           ease: "easeInOut",
-          delay: 2
+          delay: 5
         }}
       />
       
@@ -94,28 +92,24 @@ const ExperienceSection = () => {
           {experiences.map((experience, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100, rotateY: 15 }}
-              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ 
-                duration: 0.7,
-                delay: index * 0.15,
-                type: "spring",
-                stiffness: 80
+                duration: 0.4,
+                delay: index * 0.1
               }}
               whileHover={{ 
-                scale: 1.02,
-                y: -5,
+                y: -2,
                 transition: { duration: 0.2 }
               }}
-              className="glass-card p-8 hover-glow group cursor-pointer"
+              className="glass-card p-6 hover-glow group cursor-pointer"
             >
               <div className="flex items-start gap-6">
                 <motion.div 
-                  className="p-3 bg-white/10 backdrop-blur rounded-xl shadow-neon"
+                  className="p-3 bg-white/10 backdrop-blur rounded-xl"
                   whileHover={{ 
-                    scale: 1.1,
-                    rotate: 5,
+                    scale: 1.05,
                     transition: { duration: 0.2 }
                   }}
                 >
@@ -127,8 +121,7 @@ const ExperienceSection = () => {
                 </motion.div>
                 <div className="flex-1">
                   <motion.h3 
-                    className="text-2xl font-semibold text-white mb-2 group-hover:text-gradient transition-all duration-300"
-                    whileHover={{ scale: 1.02 }}
+                    className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-300"
                   >
                     {experience.title}
                   </motion.h3>
@@ -142,8 +135,6 @@ const ExperienceSection = () => {
                   </div>
                   <motion.p 
                     className="text-white/80 leading-relaxed group-hover:text-white transition-colors duration-300"
-                    initial={{ opacity: 0.8 }}
-                    whileHover={{ opacity: 1 }}
                   >
                     {experience.description}
                   </motion.p>
