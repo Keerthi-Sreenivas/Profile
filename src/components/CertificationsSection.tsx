@@ -31,7 +31,7 @@ const certifications = [
 
 const CertificationsSection = () => {
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-12 px-4 relative overflow-hidden">
       {/* Animated background elements */}
       <motion.div 
         className="absolute inset-0 bg-gradient-cyber opacity-15"
@@ -76,7 +76,7 @@ const CertificationsSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-4xl font-bold text-white mb-16 text-center text-glow"
+          className="text-3xl font-bold text-white mb-10 text-center text-glow"
         >
           AWS Certifications
         </motion.h2>

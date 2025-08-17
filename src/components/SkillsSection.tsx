@@ -27,7 +27,7 @@ const skills = [
 
 const SkillsSection = () => {
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-12 px-4 relative overflow-hidden">
       {/* Animated background elements */}
       <motion.div 
         className="absolute inset-0 bg-gradient-dark opacity-20"
@@ -73,7 +73,7 @@ const SkillsSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-4xl font-bold text-white mb-16 text-center text-glow"
+          className="text-3xl font-bold text-white mb-10 text-center text-glow"
         >
           Skills & Expertise
         </motion.h2>

@@ -33,18 +33,18 @@ export default {
           dark: '#E55527'
         },
         accent: {
-          light: '#B266FF',
-          DEFAULT: '#9A4DFF',
-          dark: '#7A3BCC'
+          light: '#FFA64D',
+          DEFAULT: '#FF8A50',
+          dark: '#E55527'
         }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle at top left, rgba(255, 138, 80, 0.1), transparent 50%)',
-        'gradient-dark': 'linear-gradient(to bottom right, rgba(154, 77, 255, 0.1), rgba(255, 107, 53, 0.1))'
+        'gradient-dark': 'linear-gradient(to bottom right, rgba(255, 107, 53, 0.1), rgba(255, 138, 80, 0.1))'
       },
       boxShadow: {
         'neon': '0 0 15px rgba(255, 138, 80, 0.3)',
-        'glow': '0 0 20px rgba(154, 77, 255, 0.2)'
+        'glow': '0 0 20px rgba(255, 107, 53, 0.2)'
       }
     }
   },

@@ -5,7 +5,7 @@ import keerthiProfile from "/lovable-uploads/634d3fe4-37c8-4d9d-b55b-3fcd08dc66a
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center py-20 px-4">
+    <section className="flex items-center justify-center py-12 px-4">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
