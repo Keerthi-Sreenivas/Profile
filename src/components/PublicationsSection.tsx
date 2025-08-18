@@ -1,26 +1,24 @@
 import { motion } from "framer-motion";
 import { FileText, ExternalLink } from "lucide-react";
-import awsQDeveloperThumb from "../assets/publications/aws-q-developer-cli-thumb.png";
-import awsFinancialAssistantThumb from "../assets/publications/aws-financial-assistant-thumb.png";
 
 const publications = [
   {
     title: "Amazon Q Developer CLI supports image inputs in your terminal",
     publication: "AWS DevOps Blog",
-    date: "2024",
+    date: "2025",
     description: "Exploring how Amazon Q Developer CLI now supports image inputs directly in your terminal for enhanced developer productivity.",
     url: "https://aws.amazon.com/blogs/devops/amazon-q-developer-cli-supports-image-inputs-in-your-terminal/",
     category: "Developer Tools",
-    thumbnail: awsQDeveloperThumb
+    thumbnail: "https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2024/05/21/Blog-Architecture-Diagram-Amazon-Q-Developer-CLI-Image-Support-1024x576.png"
   },
   {
     title: "Build a financial research assistant using Amazon Q Business and Amazon QuickSight for generative AI-powered insights",
     publication: "AWS Machine Learning Blog",
-    date: "2024",
+    date: "2025",
     description: "Comprehensive guide on building financial research assistants leveraging Amazon Q Business and QuickSight for AI-powered analytical insights.",
     url: "https://aws.amazon.com/blogs/machine-learning/build-a-financial-research-assistant-using-amazon-q-business-and-amazon-quicksight-for-generative-ai-powered-insights/",
     category: "Machine Learning",
-    thumbnail: awsFinancialAssistantThumb
+    thumbnail: "https://d2908q01vomqb2.cloudfront.net/827bfc458708f0b442009c9c9836f7e4b65557fb/2024/05/14/Screenshot-2024-05-08-at-10.45.49-AM.png"
   }
 ];
 

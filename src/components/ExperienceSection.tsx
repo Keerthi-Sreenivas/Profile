@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import awsLogo from "../assets/logos/aws-logo.svg";
 import barclaysLogo from "../assets/logos/barclays-logo.png";
-import allogeneLogo from "../assets/logos/allogene-logo.png";
-import qriosityLogo from "../assets/logos/qriosity-logo.png";
+import allogeneLogo from "../assets/logos/allogene-new-logo.png";
 
 const experiences = [
   {
@@ -13,13 +12,6 @@ const experiences = [
     period: "Jun 2024 - Current",
     description: "Led AI-driven developer productivity initiatives across 50+ customers and 3000+ developers, achieving 150% adoption growth. Delivered enterprise solutions, resilience reviews, and tailored enablement sessions for AWS customers.",
     logo: awsLogo
-  },
-  {
-    title: "Founder & Content Creator",
-    company: "Qriosity (@qriositybykeerthi)",
-    period: "2020 - Current",
-    description: "Founded technology education platform focused on AI, data science, and emerging tech trends. Built engaged community of professionals through educational content and tutorials.",
-    logo: qriosityLogo
   },
   {
     title: "Cloud/Infrastructure Engineer",
