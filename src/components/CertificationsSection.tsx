@@ -117,7 +117,7 @@ const CertificationsSection = () => {
             >
               <div className="flex flex-col items-center text-center">
                 <motion.div 
-                  className="w-20 h-20 mb-4 rounded-full overflow-hidden shadow-neon bg-white/10 backdrop-blur-sm border border-white/20"
+                  className="w-20 h-20 mb-4 rounded-full overflow-hidden shadow-neon bg-white/30 backdrop-blur-sm border border-white/30 shadow-lg"
                   whileHover={{ 
                     scale: 1.1,
                     rotate: 5,

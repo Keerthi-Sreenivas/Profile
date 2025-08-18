@@ -93,7 +93,7 @@ const EducationSection = () => {
             >
               <div className="flex items-start gap-6">
                 <motion.div 
-                  className="p-3 bg-white/10 backdrop-blur rounded-xl"
+                  className="p-3 bg-white/20 backdrop-blur rounded-xl border border-white/10 shadow-lg"
                   whileHover={{ 
                     scale: 1.05,
                     transition: { duration: 0.2 }

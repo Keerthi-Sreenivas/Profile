@@ -94,7 +94,7 @@ const FeaturedInSection = () => {
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
                     <motion.div 
-                      className="p-2 bg-gradient-cosmic rounded-lg"
+                      className="p-2 bg-white/20 backdrop-blur rounded-lg border border-white/10 shadow-lg"
                       whileHover={{ 
                         scale: 1.02,
                         transition: { duration: 0.2 }
