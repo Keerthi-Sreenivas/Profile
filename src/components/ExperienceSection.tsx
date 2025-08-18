@@ -99,7 +99,7 @@ const ExperienceSection = () => {
             >
               <div className="flex items-start gap-6">
                 <motion.div 
-                  className="p-3 bg-white/20 backdrop-blur rounded-xl border border-white/10 shadow-lg"
+                  className="p-3 bg-white/90 backdrop-blur rounded-xl border border-white/30 shadow-lg"
                   whileHover={{ 
                     scale: 1.05,
                     transition: { duration: 0.2 }
