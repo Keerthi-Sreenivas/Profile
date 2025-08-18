@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import rochesterLogo from "../assets/logos/university-of-rochester-logo.svg";
-import iiitKottayamLogo from "../assets/logos/iiit-kottayam-correct.png";
 
 const education = [
   {
@@ -20,7 +19,7 @@ const education = [
     gpa: "8.96 out of 10",
     description: "Main Author for 'IoT based Smart Medicine Reminder Kit' research at ACM/CSI/IEEE-CS Symposium. Co-Founded Proxima, an image processing startup for Smart Badminton and Yoga instruction.",
     coursework: ["Artificial Intelligence", "Data Warehousing and Data Mining", "Big Data Analytics", "Cloud Computing", "Cryptography", "Blockchain Technology"],
-    logo: iiitKottayamLogo
+    logo: "https://lms.iiitkottayam.ac.in/pluginfile.php/1/theme_moove/logo/1703654757/logo.jpg"
   }
 ];
 
