@@ -5,7 +5,7 @@ import keerthiProfile from "/lovable-uploads/634d3fe4-37c8-4d9d-b55b-3fcd08dc66a
 
 const HeroSection = () => {
   return (
-    <section className="flex items-center justify-center py-12 px-4 bg-gradient-to-br from-background to-background-dark">
+    <section className="flex items-center justify-center py-12 px-4">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 md:order-1 text-center md:text-left">
             <motion.h1 
-              className="text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 font-display leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl text-white mb-4 font-display leading-tight"
             >
               Keerthi Sreenivas
             </motion.h1>
@@ -25,7 +25,7 @@ const HeroSection = () => {
               Gen AI Solutions Architect at AWS • Creator at QriositybyKeerthi
             </motion.h2>
             <motion.p 
-              className="text-muted-foreground mb-8 text-base md:text-lg leading-relaxed"
+              className="text-white/70 mb-8 text-base md:text-lg leading-relaxed"
             >
               Trusted AWS Solutions Architect specializing in Gen AI and Developer Experience. Master's in Data Science with expertise in AI-driven business solutions.
             </motion.p>
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 <a
                   key={index}
                   href={href}
-                  className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground hover:text-primary-light transition-colors p-2 rounded-lg hover:bg-muted/50"
+                  className="flex items-center justify-center sm:justify-start gap-2 text-white/60 hover:text-primary-light transition-colors p-2 rounded-lg hover:bg-white/5"
                 >
                   <Icon className="w-5 h-5 flex-shrink-0" />
                   <span className="text-sm">{text}</span>
