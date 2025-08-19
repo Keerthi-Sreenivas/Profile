@@ -49,51 +49,21 @@ const achievements = [
 const AchievementsSection = () => {
   return (
     <section className="py-12 px-4 relative overflow-hidden">
-      {/* Animated background elements */}
+      {/* Subtle background elements */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-cyber opacity-25"
+        className="absolute inset-0 bg-gradient-cyber opacity-10"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.25 }}
+        whileInView={{ opacity: 0.1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.6 }}
-      />
-      <motion.div 
-        className="absolute top-40 left-24 w-48 h-48 bg-gradient-neon rounded-full blur-3xl"
-        animate={{ 
-          x: [0, -70, 0],
-          y: [0, 50, 0],
-          scale: [1, 1.3, 1]
-        }}
-        transition={{ 
-          duration: 12, 
-          repeat: Infinity, 
-          ease: "easeInOut" 
-        }}
-      />
-      <motion.div 
-        className="absolute bottom-32 right-16 w-36 h-36 bg-gradient-cosmic rounded-full blur-2xl"
-        animate={{ 
-          x: [0, 45, 0],
-          y: [0, -35, 0],
-        }}
-        transition={{ 
-          duration: 8, 
-          repeat: Infinity, 
-          ease: "easeInOut",
-          delay: 4
-        }}
+        transition={{ duration: 2 }}
       />
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.h2 
-          initial={{ opacity: 0, y: -30, scale: 0.9 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ 
-            duration: 0.6,
-            type: "spring",
-            stiffness: 100
-          }}
+          transition={{ duration: 0.6 }}
           className="text-3xl font-bold text-white mb-10 text-center font-display text-glow"
         >
           Achievements & Recognition
@@ -107,30 +77,21 @@ const AchievementsSection = () => {
               rel="noopener noreferrer"
               initial={{ 
                 opacity: 0, 
-                y: 70,
-                rotateX: 15,
-                scale: 0.9
+                y: 20
               }}
               whileInView={{ 
                 opacity: 1, 
-                y: 0,
-                rotateX: 0,
-                scale: 1
+                y: 0
               }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ 
-                duration: 0.8,
-                delay: index * 0.12,
-                type: "spring",
-                stiffness: 65
+                duration: 0.5,
+                delay: index * 0.1
               }}
               whileHover={{ 
-                scale: 1.05,
-                y: -10,
-                rotateY: 3,
-                transition: { duration: 0.3 }
+                scale: 1.02,
+                transition: { duration: 0.2 }
               }}
-              whileTap={{ scale: 0.95 }}
               className="glass-card p-5 hover-glow group cursor-pointer"
             >
               <div className="flex items-start gap-4">
