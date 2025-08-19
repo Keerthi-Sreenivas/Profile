@@ -4,6 +4,7 @@ import { Calendar, ExternalLink } from "lucide-react";
 import awsLogo from "../assets/logos/aws-logo.svg";
 import barclaysLogo from "../assets/logos/barclays-logo.png";
 import allogeneLogo from "../assets/logos/allogene-new-logo.png";
+import instagramLogo from "../assets/logos/instagram-logo.png";
 
 const experiences = [
   {
@@ -18,7 +19,7 @@ const experiences = [
     company: "Qriosity",
     period: "2015 - Current",
     description: "Creating educational content for 18.5k learner community @qriositybykeerthi focused on technology education, AI, data science, and emerging tech trends. Built tutorials and content to engage professionals in the tech industry.",
-    logo: "https://via.placeholder.com/64x64/FF6B35/FFFFFF?text=Q",
+    logo: instagramLogo,
     link: "https://www.instagram.com/qriositybykeerthi/?hl=en"
   },
   {
