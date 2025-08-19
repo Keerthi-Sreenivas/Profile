@@ -17,7 +17,7 @@ const experiences = [
     title: "Cloud/Infrastructure Engineer",
     company: "Barclays - Global Technology Infrastructure Services",
     period: "Jan 2023 - June 2024",
-    description: "Implemented 7+ end-to-end Observability PoCs and executed near-real-time database decommissioning insights, achieving substantial cost savings across 450+ servers. Led Observability adoption across 2500+ technology experts.",
+    description: "Pioneered Observability tooling adoption across 2500+ technology experts. Implemented 7+ end-to-end Observability PoCs and executed near-real-time database decommissioning insights, achieving substantial cost savings across 450+ servers.",
     logo: barclaysLogo
   },
   {
