@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -54,10 +53,7 @@ const Navigation = () => {
       className="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-border"
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-3 md:py-4">
-          <div className="flex items-center">
-            <ThemeToggle />
-          </div>
+        <div className="flex items-center justify-center py-3 md:py-4">
           <div className="flex flex-wrap items-center justify-center space-x-1 bg-background/5 backdrop-blur-sm rounded-full p-1 border border-border/10 max-w-full overflow-x-auto">
             {navItems.map((item) => (
               <button
@@ -82,7 +78,6 @@ const Navigation = () => {
               </button>
             ))}
           </div>
-          <div className="w-9 h-9"></div> {/* Spacer for balance */}
         </div>
       </div>
     </motion.nav>
