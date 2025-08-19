@@ -64,7 +64,7 @@ const ProjectsSection = () => {
         >
           Projects
         </motion.h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -95,20 +95,20 @@ const ProjectsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-cosmic/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="p-4 md:p-6">
+              <div className="p-3 md:p-4">
                 <h3 
-                  className="text-base md:text-lg font-semibold text-white mb-3 font-display group-hover:text-primary transition-colors duration-300"
+                  className="text-sm md:text-base font-semibold text-white mb-2 font-display group-hover:text-primary transition-colors duration-300"
                 >
                   {project.title}
                 </h3>
-                <p className="text-white/70 mb-4 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300">
+                <p className="text-white/70 mb-3 text-xs md:text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
+                <div className="flex flex-wrap gap-1.5 md:gap-2 mb-3 md:mb-4">
                   {project.tags.map((tag, tagIndex) => (
                      <span
                        key={tagIndex}
-                       className="px-2 md:px-3 py-1 bg-gradient-neon/20 text-accent-light rounded-full text-xs border border-accent/30 hover:border-accent/60 transition-all backdrop-blur-sm whitespace-nowrap"
+                       className="px-2 md:px-3 py-0.5 md:py-1 bg-gradient-neon/20 text-accent-light rounded-full text-xs border border-accent/30 hover:border-accent/60 transition-all backdrop-blur-sm whitespace-nowrap"
                      >
                        {tag}
                      </span>
@@ -118,9 +118,9 @@ const ProjectsSection = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary-light hover:text-white text-sm font-medium group/link transition-colors duration-200"
+                  className="inline-flex items-center gap-1.5 text-primary-light hover:text-white text-xs md:text-sm font-medium group/link transition-colors duration-200"
                 >
-                  <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-200" />
+                  <ExternalLink className="w-3 h-3 md:w-4 md:h-4 group-hover/link:translate-x-1 transition-transform duration-200" />
                   View Project
                 </a>
               </div>
