@@ -10,7 +10,7 @@ const skills = [
   {
     category: "Programming",
     icon: <Database className="w-4 h-4" />,
-    items: "Python, R, SQL, JavaScript, Ruby, HTML/CSS, KQL, SPL"
+    items: "Python, R, SQL, HTML/CSS, KQL, SPL"
   },
   {
     category: "Professional",
