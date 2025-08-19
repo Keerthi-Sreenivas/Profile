@@ -123,10 +123,13 @@ const EducationSection = () => {
                     <span className="text-white/60">GPA: </span>{edu.gpa}
                   </div>
                   <motion.p 
-                    className="text-white/75 leading-relaxed mb-6 group-hover:text-white transition-colors duration-300"
+                    className="text-white/75 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300"
                   >
                     {edu.description}
                   </motion.p>
+                  <div className="mb-2">
+                    <h4 className="text-white/90 font-medium text-sm mb-3">Key Coursework:</h4>
+                  </div>
                   <div className="flex flex-wrap gap-3">
                     {edu.coursework.map((course, courseIndex) => (
                       <motion.span
