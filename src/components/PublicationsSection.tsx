@@ -24,7 +24,7 @@ const publications = [
 
 const PublicationsSection = () => {
   return (
-    <section className="py-12 px-4 relative overflow-hidden">
+    <section className="py-8 md:py-12 px-4 relative overflow-hidden">
       {/* Subtle background elements */}
       <motion.div 
         className="absolute inset-0 bg-gradient-cosmic opacity-3"
@@ -34,7 +34,7 @@ const PublicationsSection = () => {
         transition={{ duration: 2 }}
       />
       <motion.div 
-        className="absolute top-16 right-12 w-18 h-18 bg-gradient-neon rounded-full blur-2xl opacity-8"
+        className="absolute top-8 md:top-16 right-6 md:right-12 w-12 md:w-18 h-12 md:h-18 bg-gradient-neon rounded-full blur-2xl opacity-8"
         animate={{ 
           x: [0, -15, 0],
           y: [0, 10, 0]
@@ -56,12 +56,12 @@ const PublicationsSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-3xl font-bold text-white mb-8 text-center text-glow"
+          className="text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 text-center text-glow"
         >
           Publications
         </motion.h2>
         
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
           {publications.map((publication, index) => (
             <motion.a
               key={index}
@@ -100,13 +100,13 @@ const PublicationsSection = () => {
               
               <div className="p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <FileText className="w-4 h-4 text-accent-light flex-shrink-0" />
+                  <FileText className="w-3 h-3 md:w-4 md:h-4 text-accent-light flex-shrink-0" />
                   <span className="text-accent-light font-medium text-xs">{publication.publication}</span>
-                  <span className="w-1 h-1 bg-primary rounded-full"></span>
-                  <span className="text-white/60 text-xs">{publication.date}</span>
+                  <span className="w-1 h-1 bg-primary rounded-full flex-shrink-0"></span>
+                  <span className="text-white/60 text-xs flex-shrink-0">{publication.date}</span>
                 </div>
                 
-                <h3 className="text-sm font-semibold text-white group-hover:text-primary transition-colors duration-300 mb-2 leading-tight line-clamp-2">
+                <h3 className="text-sm md:text-base font-semibold text-white group-hover:text-primary transition-colors duration-300 mb-2 leading-tight line-clamp-2">
                   {publication.title}
                 </h3>
                 

@@ -28,7 +28,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section className="py-12 px-4 relative overflow-hidden">
+    <section className="py-8 md:py-12 px-4 relative overflow-hidden">
       {/* Subtle background elements */}
       <motion.div 
         className="absolute inset-0 bg-gradient-dark opacity-5"
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
         transition={{ duration: 2 }}
       />
       <motion.div 
-        className="absolute top-16 left-20 w-28 h-28 bg-gradient-cosmic rounded-full blur-3xl opacity-8"
+        className="absolute top-8 md:top-16 left-10 md:left-20 w-20 md:w-28 h-20 md:h-28 bg-gradient-cosmic rounded-full blur-3xl opacity-8"
         animate={{ 
           x: [0, 15, 0],
           y: [0, -20, 0]
@@ -60,11 +60,11 @@ const ProjectsSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-3xl font-bold text-white mb-10 text-center text-glow"
+          className="text-2xl md:text-3xl font-bold text-white mb-8 md:mb-10 text-center text-glow"
         >
           Projects
         </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -95,20 +95,20 @@ const ProjectsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-cosmic/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="p-4">
+              <div className="p-4 md:p-6">
                 <h3 
-                  className="text-lg font-semibold text-white mb-3 font-display group-hover:text-primary transition-colors duration-300"
+                  className="text-base md:text-lg font-semibold text-white mb-3 font-display group-hover:text-primary transition-colors duration-300"
                 >
                   {project.title}
                 </h3>
                 <p className="text-white/70 mb-4 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
                   {project.tags.map((tag, tagIndex) => (
                      <span
                        key={tagIndex}
-                       className="px-3 py-1 bg-gradient-neon/20 text-accent-light rounded-full text-xs border border-accent/30 hover:border-accent/60 transition-all backdrop-blur-sm"
+                       className="px-2 md:px-3 py-1 bg-gradient-neon/20 text-accent-light rounded-full text-xs border border-accent/30 hover:border-accent/60 transition-all backdrop-blur-sm whitespace-nowrap"
                      >
                        {tag}
                      </span>

@@ -31,7 +31,7 @@ const certifications = [
 
 const CertificationsSection = () => {
   return (
-    <section className="py-12 px-4 relative overflow-hidden">
+    <section className="py-8 md:py-12 px-4 relative overflow-hidden">
       {/* Animated background elements */}
       <motion.div 
         className="absolute inset-0 bg-gradient-cyber opacity-15"
@@ -41,7 +41,7 @@ const CertificationsSection = () => {
         transition={{ duration: 1.3 }}
       />
       <motion.div 
-        className="absolute top-24 right-12 w-32 h-32 bg-gradient-neon rounded-full blur-3xl"
+        className="absolute top-12 md:top-24 right-6 md:right-12 w-20 md:w-32 h-20 md:h-32 bg-gradient-neon rounded-full blur-3xl"
         animate={{ 
           x: [0, -45, 0],
           y: [0, 35, 0],
@@ -53,7 +53,7 @@ const CertificationsSection = () => {
         }}
       />
       <motion.div 
-        className="absolute bottom-16 left-20 w-28 h-28 bg-gradient-cosmic rounded-full blur-2xl"
+        className="absolute bottom-8 md:bottom-16 left-10 md:left-20 w-16 md:w-28 h-16 md:h-28 bg-gradient-cosmic rounded-full blur-2xl"
         animate={{ 
           x: [0, 40, 0],
           y: [0, -30, 0],
@@ -76,11 +76,11 @@ const CertificationsSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-3xl font-bold text-white mb-10 text-center text-glow"
+          className="text-2xl md:text-3xl font-bold text-white mb-8 md:mb-10 text-center text-glow"
         >
           AWS Certifications
         </motion.h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {certifications.map((cert, index) => (
             <motion.a
               key={index}
@@ -113,11 +113,11 @@ const CertificationsSection = () => {
                 transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.95 }}
-              className="glass-card p-5 hover-glow group cursor-pointer"
+              className="glass-card p-4 md:p-5 hover-glow group cursor-pointer"
             >
               <div className="flex flex-col items-center text-center">
                 <motion.div 
-                  className="w-20 h-20 mb-4 rounded-full overflow-hidden shadow-neon bg-white/90 backdrop-blur-sm border border-white/50 shadow-lg"
+                  className="w-16 h-16 md:w-20 md:h-20 mb-3 md:mb-4 rounded-full overflow-hidden shadow-neon bg-white/90 backdrop-blur-sm border border-white/50 shadow-lg"
                   whileHover={{ 
                     scale: 1.1,
                     rotate: 5,
@@ -131,13 +131,13 @@ const CertificationsSection = () => {
                   />
                 </motion.div>
                 <motion.h3 
-                  className="text-lg font-semibold text-white mb-3 group-hover:text-gradient transition-all duration-300"
+                  className="text-sm md:text-lg font-semibold text-white mb-2 md:mb-3 group-hover:text-gradient transition-all duration-300 leading-tight"
                   whileHover={{ scale: 1.02 }}
                 >
                   {cert.title}
                 </motion.h3>
-                <p className="text-primary-light text-sm mb-2 font-medium">{cert.issuer}</p>
-                <p className="text-white/60 text-sm group-hover:text-white/80 transition-colors duration-300">
+                <p className="text-primary-light text-xs md:text-sm mb-1 md:mb-2 font-medium">{cert.issuer}</p>
+                <p className="text-white/60 text-xs md:text-sm group-hover:text-white/80 transition-colors duration-300">
                   {cert.validity}
                 </p>
               </div>
