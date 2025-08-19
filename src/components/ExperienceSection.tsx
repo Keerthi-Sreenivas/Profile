@@ -10,7 +10,7 @@ const experiences = [
     title: "Gen AI Specialist Solutions Architect",
     company: "Amazon Web Services (AWS)",
     period: "Jun 2024 - Current",
-    description: "Achieved 150% product adoption and growth across 50+ customers and 3000+ developers through AI-driven developer productivity initiatives. Delivered enterprise solutions, resilience reviews, and tailored enablement sessions for AWS customers.",
+    description: "Solutions Architect specialising on AI Developer tooling. Achieved 150% product adoption and growth across 50+ customers and 3000+ developers through AI-driven developer productivity initiatives. Delivered enterprise solutions, resilience reviews, and tailored enablement sessions for AWS customers.",
     logo: awsLogo
   },
   {
