@@ -86,15 +86,11 @@ const AchievementsSection = () => {
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.h2 
-          initial={{ opacity: 0, y: -30, scale: 0.9 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ 
-            duration: 0.6,
-            type: "spring",
-            stiffness: 100
-          }}
-          className="text-2xl md:text-3xl font-bold text-foreground mb-8 md:mb-10 text-center font-display text-glow"
+          transition={{ duration: 0.5 }}
+          className="text-2xl md:text-3xl font-bold text-foreground mb-8 md:mb-10 text-center font-display"
         >
           Achievements & Recognition
         </motion.h2>
@@ -105,46 +101,25 @@ const AchievementsSection = () => {
               href={achievement.link}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ 
-                opacity: 0, 
-                y: 70,
-                rotateX: 15,
-                scale: 0.9
-              }}
-              whileInView={{ 
-                opacity: 1, 
-                y: 0,
-                rotateX: 0,
-                scale: 1
-              }}
-              viewport={{ once: true, margin: "-50px" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ 
-                duration: 0.8,
-                delay: index * 0.12,
-                type: "spring",
-                stiffness: 65
+                duration: 0.4,
+                delay: index * 0.1
               }}
               whileHover={{ 
-                scale: 1.05,
-                y: -10,
-                rotateY: 3,
-                transition: { duration: 0.3 }
+                scale: 1.02,
+                transition: { duration: 0.2 }
               }}
-              whileTap={{ scale: 0.95 }}
-              className="glass-card p-5 hover-glow group cursor-pointer"
+              className="glass-card p-5 group cursor-pointer hover:border-primary/20 transition-colors duration-300"
             >
               <div className="flex items-start gap-4">
-                <motion.div 
-                  className="p-2 bg-gradient-neon rounded-lg flex-shrink-0"
-                  whileHover={{ 
-                    scale: 1.05,
-                    transition: { duration: 0.2 }
-                  }}
-                >
+                <div className="p-2 bg-gradient-neon rounded-lg flex-shrink-0">
                   <div className="text-foreground w-4 h-4 flex items-center justify-center">
                     {achievement.icon}
                   </div>
-                </motion.div>
+                </div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex flex-col gap-1">
@@ -157,13 +132,9 @@ const AchievementsSection = () => {
                     </div>
                     <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary-light transition-colors" />
                   </div>
-                  <motion.p 
-                    className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground transition-colors duration-300"
-                    initial={{ opacity: 0.7 }}
-                    whileHover={{ opacity: 0.9 }}
-                  >
+                  <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground transition-colors duration-300">
                     {achievement.description}
-                  </motion.p>
+                  </p>
                 </div>
               </div>
             </motion.a>
