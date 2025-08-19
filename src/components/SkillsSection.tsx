@@ -3,19 +3,14 @@ import { Code2, Database, PenTool, Users } from "lucide-react";
 
 const skills = [
   {
-    category: "AWS Services",
+    category: "Technology",
     icon: <Code2 className="w-4 h-4" />,
-    items: "AWS OpenSearch, AWS Bedrock, AWS Q Business, AWS CloudFormation, AWS S3, AWS CloudWatch, AWS X-Ray"
+    items: "Amazon Bedrock, Amazon Q Developer, Kiro, Q CLI, Amazon Opensearch, ElasticSearch, Splunk, Kafka, Logstash, APM, Kibana, AWS Cloudwatch"
   },
   {
     category: "Programming",
     icon: <Database className="w-4 h-4" />,
     items: "Python, R, SQL, JavaScript, Ruby, HTML/CSS, KQL, SPL"
-  },
-  {
-    category: "Data & Analytics",
-    icon: <PenTool className="w-4 h-4" />,
-    items: "Elasticsearch, Kibana, Logstash, Kafka, Splunk, APM, R Shiny"
   },
   {
     category: "Professional",
