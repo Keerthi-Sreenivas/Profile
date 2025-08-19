@@ -6,14 +6,14 @@ const projects = [
   {
     title: "Colorizer - Deep Learning",
     description: "A Deep learning based application that converts a Black and White (Grayscale) Image/Video into a Colour video without human guidance.",
-    image: "https://lh3.googleusercontent.com/d/193X-n0sXoFbMR9dD7rxJxwM8n_GpOwNQ",
+    image: "/lovable-uploads/cd248191-95e9-4d4a-82c3-072680e45a90.png",
     link: "https://docs.google.com/presentation/d/193X-n0sXoFbMR9dD7rxJxwM8n_GpOwNQ/edit?usp=sharing&ouid=116008293600462184270&rtpof=true&sd=true",
     tags: ["Deep Learning", "Computer Vision", "Python"]
   },
   {
     title: "Elon Musk Dogecoin Tweet Analysis - NLP",
     description: "Analyzed the sentiments around Elon's tweets about Dogecoin and impact of his tweets on the price of Doge coin.",
-    image: "https://github.com/Keerthi-Sreenivas/Elon_Musk-Doge-Tweet_Analysis/raw/main/word%20cloud%20before%20preprocessing.png",
+    image: "/lovable-uploads/82dbf840-a63a-4145-80ed-f74716f9352b.png",
     link: "https://github.com/Keerthi-Sreenivas/Elon_Musk-Doge-Tweet_Analysis/blob/main/Facts_derived_from_the_study.pdf",
     tags: ["NLP", "Sentiment Analysis", "Data Science"]
   },
