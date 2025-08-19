@@ -17,7 +17,7 @@ const experiences = [
     title: "Founder/Creator",
     company: "Qriosity",
     period: "2015 - Current",
-    description: "Built 18.5k learner community focused on technology education, AI, data science, and emerging tech trends. Created educational content and tutorials to engage professionals in the tech industry.",
+    description: "Built 18.5k learner community @qriositybykeerthi focused on technology education, AI, data science, and emerging tech trends. Created educational content and tutorials to engage professionals in the tech industry.",
     logo: "https://via.placeholder.com/64x64/FF6B35/FFFFFF?text=Q"
   },
   {
