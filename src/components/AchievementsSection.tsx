@@ -21,7 +21,7 @@ const achievements = [
     description: "Co-built a smart yoga instructor application at AIC Incubation center.",
     icon: <Users className="w-4 h-4" />,
     year: "2020",
-    link: "https://www.iiitkottayam.ac.in/"
+    link: "https://www.iiitkottayam.ac.in/#!/codingClub"
   },
   {
     title: "Elected Cultural Secretary",
