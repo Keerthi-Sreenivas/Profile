@@ -18,7 +18,7 @@ const achievements = [
   },
   {
     title: "Women Entrepreneurship Week Candidate",
-    description: "Selected to meet a Senior Director from Jio Industries for discussion about the Smart Yoga Instructor application at AIC Incubation Center.",
+    description: "Co-built a smart yoga instructor application at AIC Incubation center.",
     icon: <Users className="w-4 h-4" />,
     year: "2020",
     link: "https://www.iiitkottayam.ac.in/"
