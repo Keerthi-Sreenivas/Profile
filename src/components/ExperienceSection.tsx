@@ -14,6 +14,13 @@ const experiences = [
     logo: awsLogo
   },
   {
+    title: "Founder/Creator",
+    company: "Qriosity",
+    period: "2015 - Current",
+    description: "Built 18.5k learner community focused on technology education, AI, data science, and emerging tech trends. Created educational content and tutorials to engage professionals in the tech industry.",
+    logo: "https://via.placeholder.com/64x64/FF6B35/FFFFFF?text=Q"
+  },
+  {
     title: "Cloud/Infrastructure Engineer",
     company: "Barclays - Global Technology Infrastructure Services",
     period: "Jan 2023 - June 2024",
