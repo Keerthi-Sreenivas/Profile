@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Calendar } from "lucide-react";
+import { Calendar, ExternalLink } from "lucide-react";
 import awsLogo from "../assets/logos/aws-logo.svg";
 import barclaysLogo from "../assets/logos/barclays-logo.png";
 import allogeneLogo from "../assets/logos/allogene-new-logo.png";
@@ -18,7 +18,8 @@ const experiences = [
     company: "Qriosity",
     period: "2015 - Current",
     description: "Built 18.5k learner community @qriositybykeerthi focused on technology education, AI, data science, and emerging tech trends. Created educational content and tutorials to engage professionals in the tech industry.",
-    logo: "https://via.placeholder.com/64x64/FF6B35/FFFFFF?text=Q"
+    logo: "https://via.placeholder.com/64x64/FF6B35/FFFFFF?text=Q",
+    link: "https://www.instagram.com/qriositybykeerthi/?hl=en"
   },
   {
     title: "Cloud/Infrastructure Engineer",
@@ -119,11 +120,22 @@ const ExperienceSection = () => {
                   />
                 </motion.div>
                 <div className="flex-1">
-                  <motion.h3 
-                    className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-300"
-                  >
-                    {experience.title}
-                  </motion.h3>
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-white group-hover:text-primary transition-colors duration-300">
+                      {experience.title}
+                    </h3>
+                    {experience.link && (
+                      <a
+                        href={experience.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ExternalLink className="w-4 h-4 text-white/40 hover:text-primary-light transition-colors" />
+                      </a>
+                    )}
+                  </div>
                   <div className="flex items-center gap-3 text-white/70 mb-4">
                     <span className="font-medium text-primary-light">{experience.company}</span>
                     <span className="w-1 h-1 bg-accent rounded-full"></span>
