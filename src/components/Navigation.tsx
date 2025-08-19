@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -50,11 +51,14 @@ const Navigation = () => {
     <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-border"
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center py-3 md:py-4">
-          <div className="flex flex-wrap items-center justify-center space-x-1 bg-white/5 backdrop-blur-sm rounded-full p-1 border border-white/10 max-w-full overflow-x-auto">
+        <div className="flex items-center justify-between py-3 md:py-4">
+          <div className="flex items-center">
+            <ThemeToggle />
+          </div>
+          <div className="flex flex-wrap items-center justify-center space-x-1 bg-background/5 backdrop-blur-sm rounded-full p-1 border border-border/10 max-w-full overflow-x-auto">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -62,8 +66,8 @@ const Navigation = () => {
                 className={`
                   relative px-2 md:px-3 py-1.5 md:py-2 text-xs font-medium rounded-full transition-all duration-300 whitespace-nowrap
                   ${activeSection === item.id 
-                    ? "text-white bg-gradient-cosmic shadow-neon" 
-                    : "text-white/70 hover:text-white hover:bg-white/10"
+                    ? "text-foreground bg-gradient-cosmic shadow-neon" 
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                   }
                 `}
               >
@@ -78,6 +82,7 @@ const Navigation = () => {
               </button>
             ))}
           </div>
+          <div className="w-9 h-9"></div> {/* Spacer for balance */}
         </div>
       </div>
     </motion.nav>

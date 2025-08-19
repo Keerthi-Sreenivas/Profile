@@ -4,11 +4,67 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Light theme colors */
+    --background: 0 0% 100%;
+    --background-dark: 220 13% 91%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 12 76% 61%;
+    --primary-light: 25 95% 53%;
+    --primary-dark: 12 76% 45%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 25 95% 65%;
+    --accent-light: 35 91% 65%;
+    --accent-dark: 12 76% 45%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 12 76% 61%;
+  }
+
+  .dark {
+    /* Dark theme colors */
+    --background: 24 10% 6%;
+    --background-dark: 20 14% 4%;
+    --foreground: 210 20% 98%;
+    --card: 24 10% 6%;
+    --card-foreground: 210 20% 98%;
+    --popover: 24 10% 6%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 12 76% 61%;
+    --primary-light: 25 95% 65%;
+    --primary-dark: 12 76% 45%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 25 95% 65%;
+    --accent-light: 35 91% 65%;
+    --accent-dark: 12 76% 45%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 12 76% 61%;
+  }
+
   body {
-    @apply bg-background text-white/90 font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
     background-image: 
-      radial-gradient(circle at top left, rgba(255, 138, 80, 0.05), transparent 50%),
-      linear-gradient(to bottom right, rgba(255, 107, 53, 0.05), transparent);
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.05), transparent 50%),
+      linear-gradient(to bottom right, hsl(var(--accent) / 0.05), transparent);
   }
 
   h1, h2, h3 {
@@ -18,15 +74,15 @@
 
 @layer utilities {
   .glass-card {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg rounded-xl;
+    @apply backdrop-blur-xl bg-background/5 border border-border shadow-lg rounded-xl;
   }
   
   .glass-nav {
-    @apply backdrop-blur-xl bg-black/20 border border-white/10;
+    @apply backdrop-blur-xl bg-background/20 border border-border;
   }
   
   .btn-cosmic {
-    @apply bg-gradient-to-r from-primary to-accent text-white font-medium px-6 py-3 rounded-xl hover:shadow-neon transition-all duration-300;
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground font-medium px-6 py-3 rounded-xl hover:shadow-neon transition-all duration-300;
   }
   
   .hover-lift {
@@ -42,7 +98,7 @@
   }
   
   .text-glow {
-    text-shadow: 0 0 20px rgba(255, 138, 80, 0.3);
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.3);
   }
   
   .floating {
@@ -70,15 +126,15 @@
   }
   
   .bg-gradient-cosmic {
-    background: linear-gradient(135deg, rgb(255, 107, 53), rgb(255, 138, 80));
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
   }
   
   .bg-gradient-neon {
-    background: linear-gradient(135deg, rgb(255, 138, 80), rgb(255, 166, 77));
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
   }
   
   .bg-gradient-cyber {
-    background: linear-gradient(180deg, rgb(255, 107, 53), rgb(255, 138, 80));
+    background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--accent)));
   }
 
   .line-clamp-2 {
