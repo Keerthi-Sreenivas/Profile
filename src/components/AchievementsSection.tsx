@@ -94,7 +94,7 @@ const AchievementsSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-3xl font-bold text-white mb-10 text-center font-display text-glow"
+          className="text-2xl md:text-3xl font-bold text-foreground mb-8 md:mb-10 text-center font-display text-glow"
         >
           Achievements & Recognition
         </motion.h2>
@@ -141,24 +141,24 @@ const AchievementsSection = () => {
                     transition: { duration: 0.2 }
                   }}
                 >
-                  <div className="text-white w-4 h-4 flex items-center justify-center">
+                  <div className="text-foreground w-4 h-4 flex items-center justify-center">
                     {achievement.icon}
                   </div>
                 </motion.div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex flex-col gap-1">
-                      <h3 className="text-lg font-semibold text-white font-display group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-lg font-semibold text-foreground font-display group-hover:text-primary transition-colors duration-300">
                         {achievement.title}
                       </h3>
                       <span className="px-2 py-1 bg-gradient-cosmic/30 text-accent-light rounded-full text-xs border border-accent/30 w-fit">
                         {achievement.year}
                       </span>
                     </div>
-                    <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-primary-light transition-colors" />
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary-light transition-colors" />
                   </div>
                   <motion.p 
-                    className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300"
+                    className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground transition-colors duration-300"
                     initial={{ opacity: 0.7 }}
                     whileHover={{ opacity: 0.9 }}
                   >

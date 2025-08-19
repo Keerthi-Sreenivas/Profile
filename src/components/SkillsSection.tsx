@@ -66,7 +66,7 @@ const SkillsSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 text-center text-glow"
+          className="text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center text-glow"
         >
           Skills & Expertise
         </motion.h2>
@@ -95,15 +95,15 @@ const SkillsSection = () => {
                     transition: { duration: 0.2 }
                   }}
                 >
-                  <div className="w-4 h-4 text-white flex items-center justify-center">
+                  <div className="w-4 h-4 text-foreground flex items-center justify-center">
                     {category.icon}
                   </div>
                 </motion.div>
                 <div className="flex-1">
-                  <h3 className="text-base md:text-lg font-semibold text-white mb-1 md:mb-2 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-1 md:mb-2 group-hover:text-primary transition-colors duration-300">
                     {category.category}
                   </h3>
-                  <p className="text-white/70 text-xs md:text-sm leading-relaxed group-hover:text-white/90 transition-colors duration-300">
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed group-hover:text-foreground transition-colors duration-300">
                     {category.items}
                   </p>
                 </div>

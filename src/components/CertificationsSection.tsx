@@ -76,7 +76,7 @@ const CertificationsSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-2xl md:text-3xl font-bold text-white mb-8 md:mb-10 text-center text-glow"
+          className="text-2xl md:text-3xl font-bold text-foreground mb-8 md:mb-10 text-center text-glow"
         >
           AWS Certifications
         </motion.h2>
@@ -131,13 +131,13 @@ const CertificationsSection = () => {
                   />
                 </motion.div>
                 <motion.h3 
-                  className="text-sm md:text-lg font-semibold text-white mb-2 md:mb-3 group-hover:text-gradient transition-all duration-300 leading-tight"
+                  className="text-sm md:text-lg font-semibold text-foreground mb-2 md:mb-3 group-hover:text-gradient transition-all duration-300 leading-tight"
                   whileHover={{ scale: 1.02 }}
                 >
                   {cert.title}
                 </motion.h3>
                 <p className="text-primary-light text-xs md:text-sm mb-1 md:mb-2 font-medium">{cert.issuer}</p>
-                <p className="text-white/60 text-xs md:text-sm group-hover:text-white/80 transition-colors duration-300">
+                <p className="text-muted-foreground text-xs md:text-sm group-hover:text-foreground transition-colors duration-300">
                   {cert.validity}
                 </p>
               </div>

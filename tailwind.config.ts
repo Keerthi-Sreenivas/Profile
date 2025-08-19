@@ -69,8 +69,8 @@ export default {
         'gradient-dark': 'linear-gradient(to bottom right, rgba(255, 107, 53, 0.1), rgba(255, 138, 80, 0.1))'
       },
       boxShadow: {
-        'neon': '0 0 15px rgba(255, 138, 80, 0.3)',
-        'glow': '0 0 20px rgba(255, 107, 53, 0.2)'
+        'neon': '0 0 15px hsl(var(--primary) / 0.3)',
+        'glow': '0 0 20px hsl(var(--primary) / 0.2)'
       }
     }
   },

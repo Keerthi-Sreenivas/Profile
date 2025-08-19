@@ -83,7 +83,7 @@ const ExperienceSection = () => {
             type: "spring",
             stiffness: 100
           }}
-          className="text-3xl font-bold text-white mb-10 text-center text-glow"
+          className="text-2xl md:text-3xl font-bold text-foreground mb-8 md:mb-10 text-center text-glow"
         >
           Professional Experience
         </motion.h2>
@@ -115,16 +115,16 @@ const ExperienceSection = () => {
                   <img 
                     src={experience.logo} 
                     alt={`${experience.company} logo`}
-                    className="w-8 h-8 object-contain"
+                    className="w-8 h-8 object-contain filter dark:invert-0 invert"
                   />
                 </motion.div>
                 <div className="flex-1">
                   <motion.h3 
-                    className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-300"
+                    className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300"
                   >
                     {experience.title}
                   </motion.h3>
-                  <div className="flex items-center gap-3 text-white/70 mb-4">
+                  <div className="flex items-center gap-3 text-muted-foreground mb-4">
                     <span className="font-medium text-primary-light">{experience.company}</span>
                     <span className="w-1 h-1 bg-accent rounded-full"></span>
                     <div className="flex items-center gap-2">
@@ -133,7 +133,7 @@ const ExperienceSection = () => {
                     </div>
                   </div>
                   <motion.p 
-                    className="text-white/80 leading-relaxed group-hover:text-white transition-colors duration-300"
+                    className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300"
                   >
                     {experience.description}
                   </motion.p>
