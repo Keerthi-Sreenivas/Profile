@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/',
+  base: '/keerthi-ai-profile-92/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
